@@ -4,6 +4,8 @@
 # Do not commit the downloaded/raw dataset or derived data tables.
 SSAQS dataset/
 *.csv
+!final_student_day_table_v01.csv
+!final_student_day_table_v01_processed.csv
 
 # Keep generated table outputs out of version control by default.
 eda_outputs/tables/
