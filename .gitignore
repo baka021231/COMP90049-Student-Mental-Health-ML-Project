@@ -1,0 +1,10 @@
+.DS_Store
+.matplotlib-cache/
+
+# Do not commit the downloaded/raw dataset or derived data tables.
+SSAQS dataset/
+*.csv
+
+# Keep generated heavy outputs out of version control by default.
+eda_outputs/figures/
+eda_outputs/tables/
