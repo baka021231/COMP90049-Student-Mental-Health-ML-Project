@@ -6,6 +6,10 @@ SSAQS dataset/
 *.csv
 !final_student_day_table_v01.csv
 !final_student_day_table_v01_processed.csv
+!modeling_outputs/
+!modeling_outputs/*.csv
+!modeling_outputs/*.json
+!modeling_outputs/*.md
 
 # Keep generated table outputs out of version control by default.
 eda_outputs/tables/
