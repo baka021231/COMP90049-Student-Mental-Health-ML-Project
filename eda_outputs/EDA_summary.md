@@ -60,11 +60,34 @@ All modelling feature columns in the processed table have already been imputed o
 - Lowest mean stress: week 3, mean = 27.31, n = 59
 
 Generated figures:
-- figures/figure_1_stress_label_distribution.svg
-- figures/stress_continuous_distribution.svg
-- figures/figure_4_temporal_stress_trend.svg
-- figures/feature_means_by_stress_label.svg
-- figures/student_day_counts.svg
-- figures/feature_distributions.svg
-- figures/raw_modality_coverage.svg
-- figures/weekday_weekend_stress.svg
+- Stress label distribution
+
+  ![Stress label distribution](figures/figure_1_stress_label_distribution.svg)
+
+- Continuous stress distribution
+
+  ![Continuous stress distribution](figures/stress_continuous_distribution.svg)
+
+- Temporal stress trend
+
+  ![Temporal stress trend](figures/figure_4_temporal_stress_trend.svg)
+
+- Feature means by stress label
+
+  ![Feature means by stress label](figures/feature_means_by_stress_label.svg)
+
+- Student-day counts
+
+  ![Student-day counts](figures/student_day_counts.svg)
+
+- Feature distributions
+
+  ![Feature distributions](figures/feature_distributions.svg)
+
+- Raw modality coverage
+
+  ![Raw modality coverage](figures/raw_modality_coverage.svg)
+
+- Weekday/weekend stress
+
+  ![Weekday/weekend stress](figures/weekday_weekend_stress.svg)

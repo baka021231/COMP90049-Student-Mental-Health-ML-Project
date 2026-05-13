@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="460" viewBox="0 0 760 460">
+<rect width="100%" height="100%" fill="white"/>
+<text x="380.0" y="30.0" font-family="Arial, sans-serif" font-size="20" text-anchor="middle" fill="#222">Stress Label Distribution</text>
+<line x1="90" y1="370" x2="720" y2="370" stroke="#333"/>
+<line x1="90" y1="55" x2="90" y2="370" stroke="#333"/>
+<text x="24.0" y="212.5" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="#222">Count</text>
+<text x="380.0" y="435.0" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="#222">Stress label</text>
+<rect x="172.5" y="158.2" width="100" height="211.8" fill="#4C78A8"/>
+<text x="222.5" y="148.2" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#222">361 (25.9%)</text>
+<text x="222.5" y="398.0" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="#222">Low</text>
+<rect x="355.0" y="79.1" width="100" height="290.9" fill="#F58518"/>
+<text x="405.0" y="69.1" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#222">496 (35.6%)</text>
+<text x="405.0" y="398.0" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="#222">Medium</text>
+<rect x="537.5" y="55.0" width="100" height="315.0" fill="#54A24B"/>
+<text x="587.5" y="45.0" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#222">537 (38.5%)</text>
+<text x="587.5" y="398.0" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="#222">High</text>
+</svg>

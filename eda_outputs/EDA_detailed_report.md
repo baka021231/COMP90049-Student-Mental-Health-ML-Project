@@ -23,6 +23,8 @@
 
 相关图表：`figures/student_day_counts.svg`。
 
+![Student-day observations per student](figures/student_day_counts.svg)
+
 相关重复检查表格：
 - `tables/processed_duplicate_check.csv`
 - `tables/processed_duplicate_groups.csv`
@@ -54,6 +56,8 @@ Raw target days 总数为 3118，processed table 中保留了 1384 个 student-d
 
 相关图表：`figures/raw_modality_coverage.svg`。
 
+![Raw modality coverage against target days](figures/raw_modality_coverage.svg)
+
 ## 3. Target EDA
 
 - Low: 361 (25.9%)
@@ -72,6 +76,10 @@ Raw target days 总数为 3118，processed table 中保留了 1384 个 student-d
 相关图表：
 - `figures/figure_1_stress_label_distribution.svg`
 - `figures/stress_continuous_distribution.svg`
+
+![Stress label distribution](figures/figure_1_stress_label_distribution.svg)
+
+![Continuous stress score distribution](figures/stress_continuous_distribution.svg)
 
 ## 4. Processed Missingness EDA
 
@@ -105,6 +113,10 @@ Raw target days 总数为 3118，processed table 中保留了 1384 个 student-d
 相关图表：
 - `figures/feature_distributions.svg`
 - `figures/feature_means_by_stress_label.svg`
+
+![Feature distributions](figures/feature_distributions.svg)
+
+![Feature means by stress label](figures/feature_means_by_stress_label.svg)
 
 ## 6. Feature 与 Stress 的关系
 
@@ -150,6 +162,10 @@ Weekday / weekend 对比：
 相关图表：
 - `figures/figure_4_temporal_stress_trend.svg`
 - `figures/weekday_weekend_stress.svg`
+
+![Temporal stress trend](figures/figure_4_temporal_stress_trend.svg)
+
+![Weekday/weekend stress](figures/weekday_weekend_stress.svg)
 
 ## 8. EDA-driven Preprocessing Decisions
 

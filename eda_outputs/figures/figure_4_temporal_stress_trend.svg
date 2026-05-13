@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="500" viewBox="0 0 860 500">
+<rect width="100%" height="100%" fill="white"/>
+<text x="430.0" y="30.0" font-family="Arial, sans-serif" font-size="20" text-anchor="middle" fill="#222">Mean Self-Reported Stress by Semester Week</text>
+<line x1="80" y1="420" x2="825" y2="420" stroke="#333"/>
+<line x1="80" y1="55" x2="80" y2="420" stroke="#333"/>
+<text x="28.0" y="237.5" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="#222">Mean stress</text>
+<text x="430.0" y="475.0" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="#222">Semester week</text>
+<polyline points="80.0,299.9 121.4,362.2 162.8,383.9 204.2,304.7 245.6,200.1 286.9,184.4 328.3,242.4 369.7,204.3 411.1,353.3 452.5,267.9 493.9,332.4 535.3,368.8 576.7,321.8 618.1,248.4 659.4,289.2 700.8,252.5 742.2,116.2 783.6,128.3 825.0,91.1" fill="none" stroke="#4C78A8" stroke-width="3"/>
+<circle cx="80.0" cy="299.9" r="4" fill="#4C78A8"/>
+<text x="80.0" y="442.0" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#222">1</text>
+<circle cx="121.4" cy="362.2" r="4" fill="#4C78A8"/>
+<circle cx="162.8" cy="383.9" r="4" fill="#4C78A8"/>
+<text x="162.8" y="442.0" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#222">3</text>
+<circle cx="204.2" cy="304.7" r="4" fill="#4C78A8"/>
+<circle cx="245.6" cy="200.1" r="4" fill="#4C78A8"/>
+<text x="245.6" y="442.0" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#222">5</text>
+<circle cx="286.9" cy="184.4" r="4" fill="#4C78A8"/>
+<circle cx="328.3" cy="242.4" r="4" fill="#4C78A8"/>
+<text x="328.3" y="442.0" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#222">7</text>
+<circle cx="369.7" cy="204.3" r="4" fill="#4C78A8"/>
+<circle cx="411.1" cy="353.3" r="4" fill="#4C78A8"/>
+<text x="411.1" y="442.0" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#222">9</text>
+<circle cx="452.5" cy="267.9" r="4" fill="#4C78A8"/>
+<circle cx="493.9" cy="332.4" r="4" fill="#4C78A8"/>
+<text x="493.9" y="442.0" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#222">11</text>
+<circle cx="535.3" cy="368.8" r="4" fill="#4C78A8"/>
+<circle cx="576.7" cy="321.8" r="4" fill="#4C78A8"/>
+<text x="576.7" y="442.0" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#222">13</text>
+<circle cx="618.1" cy="248.4" r="4" fill="#4C78A8"/>
+<circle cx="659.4" cy="289.2" r="4" fill="#4C78A8"/>
+<text x="659.4" y="442.0" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#222">15</text>
+<circle cx="700.8" cy="252.5" r="4" fill="#4C78A8"/>
+<circle cx="742.2" cy="116.2" r="4" fill="#4C78A8"/>
+<text x="742.2" y="442.0" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#222">17</text>
+<circle cx="783.6" cy="128.3" r="4" fill="#4C78A8"/>
+<circle cx="825.0" cy="91.1" r="4" fill="#4C78A8"/>
+<text x="825.0" y="442.0" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#222">19</text>
+<line x1="75" y1="471.8" x2="80" y2="471.8" stroke="#333"/>
+<text x="70.0" y="475.8" font-family="Arial, sans-serif" font-size="11" text-anchor="end" fill="#222">20</text>
+<line x1="80" y1="471.8" x2="825" y2="471.8" stroke="#ddd"/>
+<line x1="75" y1="411.6" x2="80" y2="411.6" stroke="#333"/>
+<text x="70.0" y="415.6" font-family="Arial, sans-serif" font-size="11" text-anchor="end" fill="#222">25</text>
+<line x1="80" y1="411.6" x2="825" y2="411.6" stroke="#ddd"/>
+<line x1="75" y1="351.5" x2="80" y2="351.5" stroke="#333"/>
+<text x="70.0" y="355.5" font-family="Arial, sans-serif" font-size="11" text-anchor="end" fill="#222">30</text>
+<line x1="80" y1="351.5" x2="825" y2="351.5" stroke="#ddd"/>
+<line x1="75" y1="291.3" x2="80" y2="291.3" stroke="#333"/>
+<text x="70.0" y="295.3" font-family="Arial, sans-serif" font-size="11" text-anchor="end" fill="#222">35</text>
+<line x1="80" y1="291.3" x2="825" y2="291.3" stroke="#ddd"/>
+<line x1="75" y1="231.1" x2="80" y2="231.1" stroke="#333"/>
+<text x="70.0" y="235.1" font-family="Arial, sans-serif" font-size="11" text-anchor="end" fill="#222">40</text>
+<line x1="80" y1="231.1" x2="825" y2="231.1" stroke="#ddd"/>
+<line x1="75" y1="170.9" x2="80" y2="170.9" stroke="#333"/>
+<text x="70.0" y="174.9" font-family="Arial, sans-serif" font-size="11" text-anchor="end" fill="#222">45</text>
+<line x1="80" y1="170.9" x2="825" y2="170.9" stroke="#ddd"/>
+<line x1="75" y1="110.7" x2="80" y2="110.7" stroke="#333"/>
+<text x="70.0" y="114.7" font-family="Arial, sans-serif" font-size="11" text-anchor="end" fill="#222">50</text>
+<line x1="80" y1="110.7" x2="825" y2="110.7" stroke="#ddd"/>
+</svg>
