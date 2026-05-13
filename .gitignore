@@ -1,5 +1,6 @@
 .DS_Store
 .matplotlib-cache/
+__pycache__/
 
 # Do not commit the downloaded/raw dataset or derived data tables.
 SSAQS dataset/
