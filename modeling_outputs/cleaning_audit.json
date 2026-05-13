@@ -1,0 +1,46 @@
+{
+  "source_path": "final_student_day_table_v01_processed.csv",
+  "random_seed": 49,
+  "test_size": 0.25,
+  "source_rows": 1394,
+  "source_students": 32,
+  "source_duplicate_student_day_rows": 10,
+  "source_label_values_changed_by_rebuild": 0,
+  "clean_rows": 1384,
+  "clean_students": 32,
+  "clean_label_counts": {
+    "High": 534,
+    "Medium": 491,
+    "Low": 359
+  },
+  "split_summary": {
+    "test": {
+      "students": 8,
+      "rows": 287,
+      "low": 86,
+      "medium": 85,
+      "high": 116
+    },
+    "train": {
+      "students": 24,
+      "rows": 1097,
+      "low": 273,
+      "medium": 406,
+      "high": 418
+    }
+  },
+  "temporal_missing_counts": {
+    "semester_week": 0,
+    "day_of_week": 0,
+    "is_weekend": 0,
+    "lag_1_sleep_score": 32,
+    "lag_1_total_steps": 32,
+    "lag_1_avg_rmssd": 32,
+    "rolling_3_sleep_score": 32,
+    "rolling_3_total_steps": 32,
+    "rolling_3_avg_rmssd": 32,
+    "rolling_7_sleep_score": 32,
+    "rolling_7_total_steps": 32,
+    "rolling_7_avg_rmssd": 32
+  }
+}

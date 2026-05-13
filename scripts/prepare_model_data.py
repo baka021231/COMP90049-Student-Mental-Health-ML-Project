@@ -208,6 +208,7 @@ def main() -> None:
     clean = resolve_duplicates(source)
     clean = add_temporal_features(clean)
     split = make_subject_split(clean)
+    clean["split"] = clean["student_id"].map(split.set_index("student_id")["split"])
     feature_sets = make_feature_sets()
     audit = build_audit(source, clean, split)
 
