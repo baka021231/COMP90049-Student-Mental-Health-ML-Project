@@ -1,75 +1,68 @@
-# Model Data Cleaning Report
+# 建模数据清理报告
 
-## Purpose
+## 目标
 
-This module prepares a reproducible modelling table from `final_student_day_table_v01_processed.csv`.
-The processed CSV is useful for modelling because its main wearable features have already been
-completed and standardised, but it still needs a final modelling-specific cleaning layer.
+本模块的目标是从 `final_student_day_table_v01_processed.csv` 生成一份可复现、可直接用于后续 RQ 建模的 clean modelling table。
 
-## Inputs
+`final_student_day_table_v01_processed.csv` 已经适合做建模基础，因为主要 wearable 特征已经完成填补和标准化；但它仍然需要一层“建模前清理”，包括去重、统一标签、生成时间特征、固定 train/test split，以及明确哪些列不能作为模型输入。
 
-- `final_student_day_table_v01_processed.csv`: primary modelling source.
-- `final_student_day_table_v01.csv`: raw merged student-day table, used for context and auditing only.
+## 输入文件
 
-## Cleaning Principles
+- `final_student_day_table_v01_processed.csv`：主要建模来源。
+- `final_student_day_table_v01.csv`：未 fully processed 的 merged student-day 表，主要用于理解 raw missingness 和数据审计，不作为当前主建模表。
 
-1. Keep source CSV files unchanged.
-2. Resolve duplicate `student_id + date` rows before any split or modelling.
-3. Recreate `stress_label` from the numeric `stress` score so the label rule is explicit.
-4. Exclude leakage-prone columns from model feature sets.
-5. Create all RQ-specific feature sets from the same cleaned table.
-6. Use subject-aware train/test splits so the same student cannot appear in both sets.
+## 清理原则
 
-## Planned Outputs
+1. 不直接修改原始 CSV。
+2. 在任何 split 或建模之前，先处理重复的 `student_id + date`。
+3. 用数值型 `stress` 重新生成 `stress_label`，让标签规则显式可查。
+4. 明确排除可能造成 leakage 的列。
+5. 所有 RQ 的 feature set 都从同一份 clean table 派生。
+6. 使用 subject-aware train/test split，确保同一个学生不会同时出现在 train 和 test 中。
 
-- `clean_model_data.csv`: cleaned student-day modelling table.
-- `feature_sets.json`: feature columns for RQ1, RQ2, and RQ3.
-- `split_assignments.csv`: train/test assignment by student.
-- `cleaning_audit.json`: row counts, duplicate handling, class counts, and split summary.
+## 工作流程
 
-## Workflow
+清理脚本位于 `scripts/prepare_model_data.py`。
 
-The cleaning pipeline is implemented in `scripts/prepare_model_data.py`.
-
-Run it from the project root:
+在项目根目录运行：
 
 ```bash
 python3 scripts/prepare_model_data.py
 ```
 
-The script performs the following steps:
+脚本执行流程：
 
-1. Loads `final_student_day_table_v01_processed.csv`.
-2. Converts `date` to datetime and `student_id` to string.
-3. Resolves duplicate `student_id + date` rows by averaging numeric columns.
-4. Rebuilds `stress_label` from `stress` using:
+1. 读取 `final_student_day_table_v01_processed.csv`。
+2. 将 `date` 转换为 datetime，将 `student_id` 转换为 string。
+3. 对重复的 `student_id + date` 行进行处理：所有数值列取平均。
+4. 根据 `stress` 重新生成 `stress_label`：
    - Low: `stress <= 17`
    - Medium: `18 <= stress <= 38`
    - High: `stress >= 39`
-5. Adds temporal features:
+5. 添加时间特征：
    - `semester_week`
    - `day_of_week`
    - `is_weekend`
-   - one-observation lag features for sleep score, total steps, and RMSSD
-   - 3-observation and 7-observation rolling means using past observations only
-6. Defines feature sets for RQ1, RQ2, and RQ3.
-7. Creates a subject-aware train/test split using `GroupShuffleSplit`.
-8. Writes all modelling artefacts into `modeling_outputs/`.
+   - sleep score、total steps、RMSSD 的 one-observation lag 特征
+   - sleep score、total steps、RMSSD 的 3-observation / 7-observation rolling mean
+6. 定义 RQ1、RQ2、RQ3 所需的 feature sets。
+7. 使用 `GroupShuffleSplit` 创建 subject-aware train/test split。
+8. 将所有建模产物写入 `modeling_outputs/`。
 
-## Generated Outputs
+## 生成文件
 
-- `clean_model_data.csv`: cleaned student-day table with temporal features and a `split` column.
-- `feature_sets.json`: standard feature sets for all RQs.
-- `split_assignments.csv`: student-level train/test assignments.
-- `cleaning_audit.json`: machine-readable cleaning audit.
+- `clean_model_data.csv`：清理后的 student-day 建模表，包含时间特征和 `split` 列。
+- `feature_sets.json`：RQ1、RQ2、RQ3 的标准特征列定义。
+- `split_assignments.csv`：每个 student 的 train/test 分配。
+- `cleaning_audit.json`：机器可读的数据清理审计结果。
 
-## Cleaning Results
+## 清理结果
 
-| Item | Value |
+| 项目 | 数值 |
 | --- | ---: |
 | Source rows | 1,394 |
 | Source students | 32 |
-| Duplicate `student_id + date` rows | 10 |
+| 重复 `student_id + date` 行数 | 10 |
 | Clean rows | 1,384 |
 | Clean students | 32 |
 | Train students | 24 |
@@ -77,7 +70,7 @@ The script performs the following steps:
 | Train rows | 1,097 |
 | Test rows | 287 |
 
-Clean label distribution:
+清理后的标签分布：
 
 | Label | Count |
 | --- | ---: |
@@ -85,30 +78,30 @@ Clean label distribution:
 | Medium | 491 |
 | High | 534 |
 
-Split label distribution:
+Train/test 中的标签分布：
 
 | Split | Low | Medium | High | Rows |
 | --- | ---: | ---: | ---: | ---: |
 | Train | 273 | 406 | 418 | 1,097 |
 | Test | 86 | 85 | 116 | 287 |
 
-## Feature Sets
+## Feature Sets 设计
 
-RQ1 uses all wearable features:
+RQ1 使用全部 wearable 特征：
 
 - sleep features
 - activity features
 - HRV features
 - SpO2 features
 
-RQ2 uses feature-group ablation:
+RQ2 做 feature-group ablation：
 
 - `sleep_only`
 - `activity_only`
 - `hrv_spo2_only`
 - `all_wearable`
 
-RQ3 uses temporal variants:
+RQ3 比较时间特征版本：
 
 - `no_temporal`
 - `semester_week`
@@ -119,7 +112,7 @@ RQ3 uses temporal variants:
 
 ## Leakage Policy
 
-The following columns must not be used as model inputs:
+以下列不能作为模型输入：
 
 - `student_id`
 - `date`
@@ -129,21 +122,28 @@ The following columns must not be used as model inputs:
 - `STRESS_SCORE`
 - `CALCULATION_FAILED`
 
-`anxiety` is excluded because it is a same-day questionnaire variable closely related to the target.
-`STRESS_SCORE` is excluded because it is Fitbit's own stress estimate and may overlap conceptually
-with the prediction target.
+原因：
 
-## Notes for Modelling
+- `stress` 和 `stress_label` 是预测目标本身。
+- `anxiety` 是同一天问卷变量，和 stress 高度相关，主实验中使用它会让任务变得不公平。
+- `STRESS_SCORE` 是 Fitbit 自己计算出的压力分数，和目标概念重叠，可能造成 leakage。
+- `student_id` 可能让模型记住个体，而不是学习可泛化的 wearable pattern。
+- `date` 不能直接作为原始字符串输入；需要用明确的时间特征替代。
 
-- Use the existing `split` column in `clean_model_data.csv`; do not create a new split per model.
-- For RQ1 and RQ2, the core wearable features contain no missing values.
-- For RQ3, lag and rolling features have 32 missing values, corresponding to the first observation
-  for each student. Handle these inside the modelling pipeline, preferably with train-set-only median
-  imputation.
-- Logistic Regression, SVM, and MLP should use scaling inside a pipeline.
-- Random Forest does not require scaling, but using the same train/test split is still mandatory.
+## 给后续建模的注意事项
 
-## Current Status
+- 后续模型必须使用 `clean_model_data.csv` 里的 `split` 列，不要每个模型重新随机划分。
+- RQ1 和 RQ2 的核心 wearable 特征没有缺失值。
+- RQ3 的 lag / rolling 特征有 32 个缺失值，对应每个学生的第一条 observation。后续建模时应在 pipeline 内处理，建议使用 train-set-only median imputation。
+- Logistic Regression、SVM、MLP 需要在 pipeline 内做 scaling。
+- Random Forest 不需要 scaling，但必须使用同一个 train/test split。
 
-Data cleaning module complete. The next step is to build modelling scripts that consume
-`clean_model_data.csv`, `feature_sets.json`, and the fixed `split` column.
+## 当前状态
+
+数据清理模块已完成。下一步可以开始写建模脚本，直接读取：
+
+- `modeling_outputs/clean_model_data.csv`
+- `modeling_outputs/feature_sets.json`
+- `modeling_outputs/split_assignments.csv`
+
+后续 RQ1、RQ2、RQ3 都应该基于这套固定数据和固定 split 进行实验。
