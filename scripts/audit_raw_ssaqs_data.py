@@ -45,7 +45,7 @@ def student_dirs() -> list[Path]:
 def parse_date_series(series: pd.Series, unix_seconds: bool = False) -> pd.Series:
     if unix_seconds:
         return pd.to_datetime(series, unit="s", errors="coerce", utc=True).dt.date
-    return pd.to_datetime(series, errors="coerce", utc=True).dt.date
+    return pd.to_datetime(series, format="mixed", errors="coerce", utc=True).dt.date
 
 
 def read_csv_if_exists(path: Path) -> pd.DataFrame | None:

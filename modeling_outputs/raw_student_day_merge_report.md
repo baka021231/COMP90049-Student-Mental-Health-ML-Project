@@ -23,7 +23,7 @@
 - 日期范围：2025-02-14 到 2025-07-09
 - 重复 student-day 行数：15
 - 重复 student-day pair 数：15
-- wearable 缺失单元格比例：37.98%
+- wearable 缺失单元格比例：37.95%
 
 ## 标签分布
 
@@ -39,8 +39,8 @@
 | --- | --- | --- |
 | CALCULATION_FAILED | 1657 | 52.89 |
 | STRESS_SCORE | 1657 | 52.89 |
-| sleep_score | 1623 | 51.80 |
-| deep_sleep_minutes | 1623 | 51.80 |
+| sleep_score | 1616 | 51.58 |
+| deep_sleep_minutes | 1616 | 51.58 |
 | avg_low_frequency | 1487 | 47.46 |
 | avg_rmssd | 1487 | 47.46 |
 | avg_high_frequency | 1487 | 47.46 |

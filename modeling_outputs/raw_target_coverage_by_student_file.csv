@@ -133,7 +133,7 @@ student_id,file,target_days,covered_target_days,target_coverage_percent
 19,oxygen.csv,114,58,50.88
 19,stress.csv,114,44,38.6
 20,daily_questions.csv,100,100,100.0
-20,sleep.csv,100,53,53.0
+20,sleep.csv,100,55,55.0
 20,activity_level.csv,100,90,90.0
 20,steps.csv,100,90,90.0
 20,hrv.csv,100,58,58.0
@@ -182,7 +182,7 @@ student_id,file,target_days,covered_target_days,target_coverage_percent
 26,oxygen.csv,102,77,75.49
 26,stress.csv,102,72,70.59
 27,daily_questions.csv,113,113,100.0
-27,sleep.csv,113,86,76.11
+27,sleep.csv,113,91,80.53
 27,activity_level.csv,113,105,92.92
 27,steps.csv,113,104,92.04
 27,hrv.csv,113,93,82.3

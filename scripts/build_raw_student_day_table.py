@@ -70,7 +70,7 @@ def read_csv_if_exists(path: Path) -> pd.DataFrame | None:
 def parse_dates(series: pd.Series, unix_seconds: bool = False) -> pd.Series:
     if unix_seconds:
         return pd.to_datetime(series, unit="s", errors="coerce", utc=True).dt.date
-    return pd.to_datetime(series, errors="coerce", utc=True).dt.date
+    return pd.to_datetime(series, format="mixed", errors="coerce", utc=True).dt.date
 
 
 def stress_to_label(stress: float) -> str:

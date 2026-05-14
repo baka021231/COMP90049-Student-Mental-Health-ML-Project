@@ -133,7 +133,7 @@ student_id,file,exists,rows,columns,unique_dates,missing_value_cells,total_value
 19,oxygen.csv,1,27540,"timestamp, value",60,0,27540,0.0,2025-02-25,2025-05-08
 19,stress.csv,1,46,"DATE, UPDATED_AT, STRESS_SCORE, CALCULATION_FAILED",46,0,92,0.0,2025-02-25,2025-05-08
 20,daily_questions.csv,1,100,"timeStampScheduled, timeStampSent, timeStampStart, timeStampStop, originalTimeStampSent, timeZoneOffset, deltaUTC, stress, anxiety",100,0,200,0.0,2025-02-19,2025-06-20
-20,sleep.csv,1,69,"timestamp, overall_score, deep_sleep_in_minutes",66,0,138,0.0,2025-02-18,2025-06-07
+20,sleep.csv,1,69,"timestamp, overall_score, deep_sleep_in_minutes",68,0,138,0.0,2025-02-18,2025-06-07
 20,activity_level.csv,1,83082,"timestamp, level",112,0,83082,0.0,2025-02-18,2025-06-09
 20,steps.csv,1,24425,"timestamp, steps",112,0,24425,0.0,2025-02-18,2025-06-09
 20,hrv.csv,1,5398,"timestamp, rmssd, coverage, low_frequency, high_frequency",72,0,21592,0.0,2025-02-18,2025-06-07
@@ -182,7 +182,7 @@ student_id,file,exists,rows,columns,unique_dates,missing_value_cells,total_value
 26,oxygen.csv,1,46713,"timestamp, value",92,0,46713,0.0,2025-03-13,2025-06-13
 26,stress.csv,1,87,"DATE, UPDATED_AT, STRESS_SCORE, CALCULATION_FAILED",87,0,174,0.0,2025-03-14,2025-06-13
 27,daily_questions.csv,1,116,"timeStampScheduled, timeStampSent, timeStampStart, timeStampStop, originalTimeStampSent, timeZoneOffset, deltaUTC, stress, anxiety",113,0,232,0.0,2025-03-07,2025-07-03
-27,sleep.csv,1,97,"timestamp, overall_score, deep_sleep_in_minutes",91,0,194,0.0,2025-03-14,2025-06-30
+27,sleep.csv,1,97,"timestamp, overall_score, deep_sleep_in_minutes",96,0,194,0.0,2025-03-14,2025-06-30
 27,activity_level.csv,1,84028,"timestamp, level",110,0,84028,0.0,2025-03-13,2025-06-30
 27,steps.csv,1,36823,"timestamp, steps",109,0,36823,0.0,2025-03-14,2025-06-30
 27,hrv.csv,1,7765,"timestamp, rmssd, coverage, low_frequency, high_frequency",98,0,31060,0.0,2025-03-14,2025-06-29

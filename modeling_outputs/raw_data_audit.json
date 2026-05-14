@@ -21,8 +21,8 @@
   },
   "students_with_all_expected_files": 32,
   "total_target_days": 3118,
-  "complete_wearable_target_days": 1482,
-  "complete_wearable_target_percent": 47.53,
+  "complete_wearable_target_days": 1489,
+  "complete_wearable_target_percent": 47.75,
   "daily_questions": {
     "daily_question_rows": 3133,
     "daily_question_students": 35,
@@ -67,9 +67,9 @@
     {
       "file": "sleep.csv",
       "total_target_days": 3118,
-      "covered_target_days": 1501,
-      "mean_student_coverage_percent": 44.60885714285714,
-      "overall_target_coverage_percent": 48.14
+      "covered_target_days": 1508,
+      "mean_student_coverage_percent": 44.79228571428572,
+      "overall_target_coverage_percent": 48.36
     },
     {
       "file": "steps.csv",

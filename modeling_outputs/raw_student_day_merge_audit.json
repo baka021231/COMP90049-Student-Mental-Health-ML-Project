@@ -12,12 +12,12 @@
     "High": 1057,
     "Medium": 990
   },
-  "wearable_missing_cells": 14280,
+  "wearable_missing_cells": 14266,
   "wearable_total_cells": 37596,
-  "wearable_missing_percent": 37.98,
+  "wearable_missing_percent": 37.95,
   "missing_by_column": {
-    "sleep_score": 1623,
-    "deep_sleep_minutes": 1623,
+    "sleep_score": 1616,
+    "deep_sleep_minutes": 1616,
     "total_steps": 889,
     "sedentary_minutes": 864,
     "lightly_active_minutes": 864,
