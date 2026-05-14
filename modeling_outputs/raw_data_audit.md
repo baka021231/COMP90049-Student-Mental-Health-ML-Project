@@ -1,17 +1,17 @@
-# Raw SSAQS Data Audit
+# SSAQS 原始数据审计
 
-## Purpose
+## 目的
 
-This audit records the structure, coverage, and missingness of the original `SSAQS dataset/` directory before any modeling preprocessing.
+本报告记录 `SSAQS dataset/` 原始目录在任何建模预处理之前的数据结构、覆盖率和缺失情况。
 
-## Dataset Scale
+## 数据规模
 
-- Student directories: 35
-- Students with all expected per-student files: 32
-- Total target days from daily questionnaires: 3118
-- Target days with complete wearable file coverage: 1482 (47.53%)
+- 学生目录数：35
+- 拥有全部预期学生文件的学生数：32
+- daily questionnaire 中有目标标签的 student-day 总数：3118
+- 同一天同时有完整 wearable 文件覆盖的目标天数：1482 (47.53%)
 
-## Expected File Counts
+## 预期文件数量
 
 | file | student_file_count |
 | --- | --- |
@@ -23,7 +23,7 @@ This audit records the structure, coverage, and missingness of the original `SSA
 | steps.csv | 32 |
 | stress.csv | 32 |
 
-## Missing Expected Files
+## 缺失的预期文件
 
 | file | missing_student_count |
 | --- | --- |
@@ -34,7 +34,7 @@ This audit records the structure, coverage, and missingness of the original `SSA
 | steps.csv | 3 |
 | stress.csv | 3 |
 
-## Coverage Against Daily Questionnaire Target Days
+## 相对于问卷目标天的覆盖率
 
 | file | total_target_days | covered_target_days | mean_student_coverage_percent | overall_target_coverage_percent |
 | --- | --- | --- | --- | --- |
@@ -46,7 +46,7 @@ This audit records the structure, coverage, and missingness of the original `SSA
 | steps.csv | 3118 | 2232 | 68.49 | 71.58 |
 | stress.csv | 3118 | 1466 | 43.68 | 47.02 |
 
-## Students With Lowest Complete Wearable Coverage
+## 完整 wearable 覆盖率最低的学生
 
 | student_id | target_days | complete_wearable_target_days | complete_wearable_target_percent | has_all_expected_files |
 | --- | --- | --- | --- | --- |
@@ -61,7 +61,7 @@ This audit records the structure, coverage, and missingness of the original `SSA
 | 23 | 76 | 22 | 28.95 | 1 |
 | 21 | 59 | 18 | 30.51 | 1 |
 
-## Daily Questionnaire Audit
+## Daily Questionnaire 审计
 
 | metric | value |
 | --- | --- |
@@ -76,8 +76,8 @@ This audit records the structure, coverage, and missingness of the original `SSA
 | stress_missing_rows | 0 |
 | anxiety_missing_rows | 0 |
 
-## Implications for Modeling
+## 对后续建模的影响
 
-- The original data contains substantial wearable missingness and should not be globally standardized before splitting.
-- A leakage-safe modeling pipeline should split by student first, then fit imputation and scaling only within the training folds.
-- Students with missing wearable files or very low coverage should be explicitly discussed as a limitation or handled by a documented filtering rule.
+- 原始数据存在明显的 wearable 缺失，不能在 train/test 划分前直接做全局标准化。
+- 为避免 preprocessing leakage，后续建模应先按学生划分 train/test，再在训练折内部拟合填补和标准化步骤。
+- 对于缺失 wearable 文件或覆盖率很低的学生，需要在报告中作为 limitation 说明，或使用明确且可复现的过滤规则处理。

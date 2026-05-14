@@ -326,20 +326,20 @@ def write_markdown_summary(
     low_availability = availability.sort_values("complete_wearable_target_percent").head(10)
 
     lines = [
-        "# Raw SSAQS Data Audit",
+        "# SSAQS 原始数据审计",
         "",
-        "## Purpose",
+        "## 目的",
         "",
-        "This audit records the structure, coverage, and missingness of the original `SSAQS dataset/` directory before any modeling preprocessing.",
+        "本报告记录 `SSAQS dataset/` 原始目录在任何建模预处理之前的数据结构、覆盖率和缺失情况。",
         "",
-        "## Dataset Scale",
+        "## 数据规模",
         "",
-        f"- Student directories: {summary['student_dirs']}",
-        f"- Students with all expected per-student files: {summary['students_with_all_expected_files']}",
-        f"- Total target days from daily questionnaires: {summary['total_target_days']}",
-        f"- Target days with complete wearable file coverage: {summary['complete_wearable_target_days']} ({summary['complete_wearable_target_percent']:.2f}%)",
+        f"- 学生目录数：{summary['student_dirs']}",
+        f"- 拥有全部预期学生文件的学生数：{summary['students_with_all_expected_files']}",
+        f"- daily questionnaire 中有目标标签的 student-day 总数：{summary['total_target_days']}",
+        f"- 同一天同时有完整 wearable 文件覆盖的目标天数：{summary['complete_wearable_target_days']} ({summary['complete_wearable_target_percent']:.2f}%)",
         "",
-        "## Expected File Counts",
+        "## 预期文件数量",
         "",
         dataframe_to_markdown(
             pd.DataFrame(
@@ -347,21 +347,21 @@ def write_markdown_summary(
             ).sort_values("file")
         ),
         "",
-        "## Missing Expected Files",
+        "## 缺失的预期文件",
         "",
         dataframe_to_markdown(missing_file_summary)
         if not missing_file_summary.empty
-        else "No expected per-student files are missing.",
+        else "没有缺失的预期学生文件。",
         "",
-        "## Coverage Against Daily Questionnaire Target Days",
+        "## 相对于问卷目标天的覆盖率",
         "",
         dataframe_to_markdown(coverage_summary.sort_values("file")),
         "",
-        "## Students With Lowest Complete Wearable Coverage",
+        "## 完整 wearable 覆盖率最低的学生",
         "",
         dataframe_to_markdown(low_availability),
         "",
-        "## Daily Questionnaire Audit",
+        "## Daily Questionnaire 审计",
         "",
         dataframe_to_markdown(
             pd.DataFrame([summary["daily_questions"]]).T.reset_index().rename(
@@ -369,11 +369,11 @@ def write_markdown_summary(
             )
         ),
         "",
-        "## Implications for Modeling",
+        "## 对后续建模的影响",
         "",
-        "- The original data contains substantial wearable missingness and should not be globally standardized before splitting.",
-        "- A leakage-safe modeling pipeline should split by student first, then fit imputation and scaling only within the training folds.",
-        "- Students with missing wearable files or very low coverage should be explicitly discussed as a limitation or handled by a documented filtering rule.",
+        "- 原始数据存在明显的 wearable 缺失，不能在 train/test 划分前直接做全局标准化。",
+        "- 为避免 preprocessing leakage，后续建模应先按学生划分 train/test，再在训练折内部拟合填补和标准化步骤。",
+        "- 对于缺失 wearable 文件或覆盖率很低的学生，需要在报告中作为 limitation 说明，或使用明确且可复现的过滤规则处理。",
         "",
     ]
     SUMMARY_MD_PATH.write_text("\n".join(lines), encoding="utf-8")
