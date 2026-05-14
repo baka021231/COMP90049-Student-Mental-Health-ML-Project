@@ -1,0 +1,92 @@
+{
+  "leakage_columns_excluded_from_model_inputs": [
+    "student_id",
+    "date",
+    "stress",
+    "stress_label",
+    "anxiety",
+    "STRESS_SCORE",
+    "CALCULATION_FAILED"
+  ],
+  "rq1_all_wearable": [
+    "sleep_score",
+    "deep_sleep_minutes",
+    "total_steps",
+    "sedentary_minutes",
+    "lightly_active_minutes",
+    "moderately_active_minutes",
+    "very_active_minutes",
+    "avg_rmssd",
+    "avg_low_frequency",
+    "avg_high_frequency",
+    "avg_oxygen",
+    "std_oxygen"
+  ],
+  "rq2_feature_groups": {
+    "sleep_only": [
+      "sleep_score",
+      "deep_sleep_minutes"
+    ],
+    "activity_only": [
+      "total_steps",
+      "sedentary_minutes",
+      "lightly_active_minutes",
+      "moderately_active_minutes",
+      "very_active_minutes"
+    ],
+    "hrv_spo2_only": [
+      "avg_rmssd",
+      "avg_low_frequency",
+      "avg_high_frequency",
+      "avg_oxygen",
+      "std_oxygen"
+    ],
+    "all_wearable": [
+      "sleep_score",
+      "deep_sleep_minutes",
+      "total_steps",
+      "sedentary_minutes",
+      "lightly_active_minutes",
+      "moderately_active_minutes",
+      "very_active_minutes",
+      "avg_rmssd",
+      "avg_low_frequency",
+      "avg_high_frequency",
+      "avg_oxygen",
+      "std_oxygen"
+    ]
+  },
+  "rq3_temporal_variants": {
+    "no_temporal": [
+      "sleep_score",
+      "deep_sleep_minutes",
+      "total_steps",
+      "sedentary_minutes",
+      "lightly_active_minutes",
+      "moderately_active_minutes",
+      "very_active_minutes",
+      "avg_rmssd",
+      "avg_low_frequency",
+      "avg_high_frequency",
+      "avg_oxygen",
+      "std_oxygen"
+    ],
+    "calendar": [
+      "sleep_score",
+      "deep_sleep_minutes",
+      "total_steps",
+      "sedentary_minutes",
+      "lightly_active_minutes",
+      "moderately_active_minutes",
+      "very_active_minutes",
+      "avg_rmssd",
+      "avg_low_frequency",
+      "avg_high_frequency",
+      "avg_oxygen",
+      "std_oxygen",
+      "semester_week",
+      "day_of_week",
+      "is_weekend"
+    ]
+  }
+}

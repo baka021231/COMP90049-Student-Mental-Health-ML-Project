@@ -1,0 +1,50 @@
+{
+  "source_path": "strict_clean_student_day_table.csv",
+  "strict_model_data_path": "strict_model_data.csv",
+  "random_seed": 49,
+  "test_size": 0.25,
+  "rows": 3118,
+  "students": 35,
+  "unique_student_days": 3118,
+  "label_counts": {
+    "Low": 1082,
+    "High": 1052,
+    "Medium": 984
+  },
+  "split_summary": {
+    "test": {
+      "students": 9,
+      "rows": 901,
+      "low": 386,
+      "medium": 267,
+      "high": 248
+    },
+    "train": {
+      "students": 26,
+      "rows": 2217,
+      "low": 696,
+      "medium": 717,
+      "high": 804
+    }
+  },
+  "wearable_missing_by_feature": {
+    "sleep_score": 1617,
+    "deep_sleep_minutes": 1617,
+    "total_steps": 886,
+    "sedentary_minutes": 861,
+    "lightly_active_minutes": 861,
+    "moderately_active_minutes": 861,
+    "very_active_minutes": 861,
+    "avg_rmssd": 1481,
+    "avg_low_frequency": 1481,
+    "avg_high_frequency": 1481,
+    "avg_oxygen": 1109,
+    "std_oxygen": 1111
+  },
+  "calendar_features_added": [
+    "semester_week",
+    "day_of_week",
+    "is_weekend"
+  ],
+  "preprocessing_policy": "\u4e0d\u5728\u6b64\u6b65\u9aa4\u505a\u586b\u8865\u6216\u6807\u51c6\u5316\uff1b\u7f3a\u5931\u503c\u586b\u8865\u548c scaling \u5fc5\u987b\u653e\u5165\u540e\u7eed\u6a21\u578b pipeline\u3002"
+}
