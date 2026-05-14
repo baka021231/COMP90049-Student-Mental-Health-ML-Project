@@ -4,6 +4,13 @@ import json
 from pathlib import Path
 
 import pandas as pd
+from sklearn.dummy import DummyClassifier
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.linear_model import LogisticRegression
+from sklearn.neural_network import MLPClassifier
+from sklearn.pipeline import Pipeline
+from sklearn.preprocessing import StandardScaler
+from sklearn.svm import SVC
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -16,6 +23,7 @@ TARGET_COLUMN = "stress_label"
 SPLIT_COLUMN = "split"
 RQ1_FEATURE_SET_NAME = "rq1_all_wearable"
 LABEL_ORDER = ["Low", "Medium", "High"]
+RANDOM_SEED = 49
 
 
 def load_feature_names() -> list[str]:
@@ -63,12 +71,75 @@ def make_train_test_data(
     return X_train, y_train, X_test, y_test
 
 
+def build_models() -> dict[str, object]:
+    return {
+        "majority_baseline": DummyClassifier(strategy="most_frequent"),
+        "logistic_regression": Pipeline(
+            steps=[
+                ("scaler", StandardScaler()),
+                (
+                    "classifier",
+                    LogisticRegression(
+                        max_iter=1000,
+                        class_weight="balanced",
+                        random_state=RANDOM_SEED,
+                    ),
+                ),
+            ]
+        ),
+        "svm": Pipeline(
+            steps=[
+                ("scaler", StandardScaler()),
+                (
+                    "classifier",
+                    SVC(
+                        kernel="rbf",
+                        class_weight="balanced",
+                        random_state=RANDOM_SEED,
+                    ),
+                ),
+            ]
+        ),
+        "random_forest": RandomForestClassifier(
+            n_estimators=300,
+            class_weight="balanced",
+            random_state=RANDOM_SEED,
+        ),
+        "mlp": Pipeline(
+            steps=[
+                ("scaler", StandardScaler()),
+                (
+                    "classifier",
+                    MLPClassifier(
+                        hidden_layer_sizes=(64,),
+                        alpha=0.001,
+                        max_iter=1000,
+                        random_state=RANDOM_SEED,
+                    ),
+                ),
+            ]
+        ),
+    }
+
+
+def fit_models(
+    models: dict[str, object], X_train: pd.DataFrame, y_train: pd.Series
+) -> dict[str, object]:
+    fitted_models = {}
+    for model_name, model in models.items():
+        model.fit(X_train, y_train)
+        fitted_models[model_name] = model
+    return fitted_models
+
+
 def main() -> None:
     OUT_DIR.mkdir(exist_ok=True)
     data = load_modeling_data()
     features = load_feature_names()
     validate_features(data, features)
     X_train, y_train, X_test, y_test = make_train_test_data(data, features)
+    models = build_models()
+    fitted_models = fit_models(models, X_train, y_train)
 
     print("Loaded RQ1 modeling data.")
     print(f"Input data: {DATA_PATH.relative_to(ROOT)}")
@@ -78,6 +149,7 @@ def main() -> None:
     print(f"Test rows: {len(X_test)}")
     print(f"Train labels: {y_train.value_counts().reindex(LABEL_ORDER, fill_value=0).to_dict()}")
     print(f"Test labels: {y_test.value_counts().reindex(LABEL_ORDER, fill_value=0).to_dict()}")
+    print(f"Fitted models: {', '.join(fitted_models)}")
 
 
 if __name__ == "__main__":
