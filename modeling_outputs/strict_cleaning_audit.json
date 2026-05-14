@@ -1,0 +1,49 @@
+{
+  "source_path": "raw_student_day_table.csv",
+  "clean_path": "strict_clean_student_day_table.csv",
+  "source_rows": 3133,
+  "source_students": 35,
+  "source_unique_student_days": 3118,
+  "duplicate_student_day_pairs": 15,
+  "duplicate_pairs_with_stress_conflict": 15,
+  "duplicate_pairs_with_label_conflict": 7,
+  "clean_rows": 3118,
+  "clean_students": 35,
+  "clean_unique_student_days": 3118,
+  "removed_duplicate_rows": 15,
+  "label_counts": {
+    "Low": 1082,
+    "High": 1052,
+    "Medium": 984
+  },
+  "complete_wearable_rows": 1482,
+  "complete_wearable_percent": 47.53,
+  "wearable_missing_cells": 14227,
+  "wearable_total_cells": 37416,
+  "wearable_missing_percent": 38.02,
+  "leakage_columns_excluded_from_model_inputs": [
+    "student_id",
+    "date",
+    "stress",
+    "stress_label",
+    "anxiety",
+    "STRESS_SCORE",
+    "CALCULATION_FAILED"
+  ],
+  "missing_by_column": {
+    "sleep_score": 1617,
+    "deep_sleep_minutes": 1617,
+    "total_steps": 886,
+    "sedentary_minutes": 861,
+    "lightly_active_minutes": 861,
+    "moderately_active_minutes": 861,
+    "very_active_minutes": 861,
+    "avg_rmssd": 1481,
+    "avg_low_frequency": 1481,
+    "avg_high_frequency": 1481,
+    "avg_oxygen": 1109,
+    "std_oxygen": 1111,
+    "STRESS_SCORE": 1652,
+    "CALCULATION_FAILED": 1652
+  }
+}
