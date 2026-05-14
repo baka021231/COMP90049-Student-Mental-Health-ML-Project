@@ -1,19 +1,18 @@
 from __future__ import annotations
 
-import json
 from pathlib import Path
 
 import pandas as pd
-from sklearn.dummy import DummyClassifier
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import accuracy_score
-from sklearn.metrics import confusion_matrix
-from sklearn.metrics import precision_recall_fscore_support
-from sklearn.neural_network import MLPClassifier
-from sklearn.pipeline import Pipeline
-from sklearn.preprocessing import StandardScaler
-from sklearn.svm import SVC
+from modeling_utils import LABEL_ORDER
+from modeling_utils import build_models
+from modeling_utils import dataframe_to_markdown
+from modeling_utils import evaluate_models
+from modeling_utils import fit_models
+from modeling_utils import format_metric
+from modeling_utils import load_feature_sets
+from modeling_utils import load_modeling_data
+from modeling_utils import make_train_test_data
+from modeling_utils import validate_features
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -23,194 +22,24 @@ FEATURE_SETS_PATH = OUT_DIR / "feature_sets.json"
 RESULTS_PATH = OUT_DIR / "rq1_results.csv"
 SUMMARY_PATH = OUT_DIR / "rq1_summary.md"
 
-TARGET_COLUMN = "stress_label"
-SPLIT_COLUMN = "split"
 RQ1_FEATURE_SET_NAME = "rq1_all_wearable"
-LABEL_ORDER = ["Low", "Medium", "High"]
-RANDOM_SEED = 49
 
 
 def load_feature_names() -> list[str]:
-    feature_sets = json.loads(FEATURE_SETS_PATH.read_text(encoding="utf-8"))
+    feature_sets = load_feature_sets(FEATURE_SETS_PATH)
     if RQ1_FEATURE_SET_NAME not in feature_sets:
         raise KeyError(f"Missing feature set: {RQ1_FEATURE_SET_NAME}")
     return feature_sets[RQ1_FEATURE_SET_NAME]
-
-
-def load_modeling_data() -> pd.DataFrame:
-    data = pd.read_csv(DATA_PATH, encoding="utf-8-sig")
-    required_columns = {TARGET_COLUMN, SPLIT_COLUMN}
-    missing = sorted(required_columns - set(data.columns))
-    if missing:
-        raise ValueError(f"Missing required columns in modeling data: {missing}")
-    return data
-
-
-def validate_features(data: pd.DataFrame, features: list[str]) -> None:
-    missing = sorted(set(features) - set(data.columns))
-    if missing:
-        raise ValueError(f"Missing RQ1 feature columns: {missing}")
-
-    feature_missing_counts = data[features].isna().sum()
-    missing_features = feature_missing_counts[feature_missing_counts > 0]
-    if not missing_features.empty:
-        raise ValueError(
-            "RQ1 wearable features contain missing values:\n"
-            + missing_features.to_string()
-        )
-
-
-def make_train_test_data(
-    data: pd.DataFrame, features: list[str]
-) -> tuple[pd.DataFrame, pd.Series, pd.DataFrame, pd.Series]:
-    train = data[data[SPLIT_COLUMN] == "train"].copy()
-    test = data[data[SPLIT_COLUMN] == "test"].copy()
-    if train.empty or test.empty:
-        raise ValueError("Both train and test splits must contain rows.")
-
-    X_train = train[features]
-    y_train = train[TARGET_COLUMN]
-    X_test = test[features]
-    y_test = test[TARGET_COLUMN]
-    return X_train, y_train, X_test, y_test
-
-
-def build_models() -> dict[str, object]:
-    return {
-        "majority_baseline": DummyClassifier(strategy="most_frequent"),
-        "logistic_regression": Pipeline(
-            steps=[
-                ("scaler", StandardScaler()),
-                (
-                    "classifier",
-                    LogisticRegression(
-                        max_iter=1000,
-                        class_weight="balanced",
-                        random_state=RANDOM_SEED,
-                    ),
-                ),
-            ]
-        ),
-        "svm": Pipeline(
-            steps=[
-                ("scaler", StandardScaler()),
-                (
-                    "classifier",
-                    SVC(
-                        kernel="rbf",
-                        class_weight="balanced",
-                        random_state=RANDOM_SEED,
-                    ),
-                ),
-            ]
-        ),
-        "random_forest": RandomForestClassifier(
-            n_estimators=300,
-            class_weight="balanced",
-            random_state=RANDOM_SEED,
-        ),
-        "mlp": Pipeline(
-            steps=[
-                ("scaler", StandardScaler()),
-                (
-                    "classifier",
-                    MLPClassifier(
-                        hidden_layer_sizes=(64,),
-                        alpha=0.001,
-                        max_iter=3000,
-                        random_state=RANDOM_SEED,
-                    ),
-                ),
-            ]
-        ),
-    }
-
-
-def fit_models(
-    models: dict[str, object], X_train: pd.DataFrame, y_train: pd.Series
-) -> dict[str, object]:
-    fitted_models = {}
-    for model_name, model in models.items():
-        model.fit(X_train, y_train)
-        fitted_models[model_name] = model
-    return fitted_models
 
 
 def confusion_matrix_path(model_name: str) -> Path:
     return OUT_DIR / f"rq1_confusion_matrix_{model_name}.csv"
 
 
-def evaluate_models(
-    fitted_models: dict[str, object], X_test: pd.DataFrame, y_test: pd.Series
-) -> tuple[pd.DataFrame, dict[str, pd.DataFrame]]:
-    rows = []
-    confusion_matrices = {}
-    for model_name, model in fitted_models.items():
-        y_pred = model.predict(X_test)
-        macro_precision, macro_recall, macro_f1, _ = precision_recall_fscore_support(
-            y_test,
-            y_pred,
-            average="macro",
-            zero_division=0,
-        )
-        _, _, per_class_f1, per_class_support = precision_recall_fscore_support(
-            y_test,
-            y_pred,
-            labels=LABEL_ORDER,
-            zero_division=0,
-        )
-
-        rows.append(
-            {
-                "model": model_name,
-                "accuracy": accuracy_score(y_test, y_pred),
-                "macro_precision": macro_precision,
-                "macro_recall": macro_recall,
-                "macro_f1": macro_f1,
-                "low_f1": per_class_f1[0],
-                "medium_f1": per_class_f1[1],
-                "high_f1": per_class_f1[2],
-                "low_support": int(per_class_support[0]),
-                "medium_support": int(per_class_support[1]),
-                "high_support": int(per_class_support[2]),
-            }
-        )
-
-        matrix = confusion_matrix(y_test, y_pred, labels=LABEL_ORDER)
-        confusion_matrices[model_name] = pd.DataFrame(
-            matrix,
-            index=[f"actual_{label}" for label in LABEL_ORDER],
-            columns=[f"predicted_{label}" for label in LABEL_ORDER],
-        )
-
-    results = pd.DataFrame(rows).sort_values("macro_f1", ascending=False)
-    return results, confusion_matrices
-
-
 def save_results(results: pd.DataFrame, confusion_matrices: dict[str, pd.DataFrame]) -> None:
     results.to_csv(RESULTS_PATH, index=False)
     for model_name, matrix in confusion_matrices.items():
         matrix.to_csv(confusion_matrix_path(model_name))
-
-
-def format_metric(value: float) -> str:
-    return f"{value:.3f}"
-
-
-def dataframe_to_markdown(data: pd.DataFrame) -> str:
-    display = data.copy()
-    for column in display.columns:
-        if pd.api.types.is_float_dtype(display[column]):
-            display[column] = display[column].map(format_metric)
-    headers = [str(column) for column in display.columns]
-    rows = display.astype(str).values.tolist()
-    lines = [
-        "| " + " | ".join(headers) + " |",
-        "| " + " | ".join(["---"] * len(headers)) + " |",
-    ]
-    for row in rows:
-        lines.append("| " + " | ".join(row) + " |")
-    return "\n".join(lines)
 
 
 def write_summary(
@@ -283,12 +112,11 @@ def write_summary(
 
 def main() -> None:
     OUT_DIR.mkdir(exist_ok=True)
-    data = load_modeling_data()
+    data = load_modeling_data(DATA_PATH)
     features = load_feature_names()
-    validate_features(data, features)
+    validate_features(data, features, "RQ1")
     X_train, y_train, X_test, y_test = make_train_test_data(data, features)
-    models = build_models()
-    fitted_models = fit_models(models, X_train, y_train)
+    fitted_models = fit_models(build_models(), X_train, y_train)
     results, confusion_matrices = evaluate_models(fitted_models, X_test, y_test)
     save_results(results, confusion_matrices)
     write_summary(results, features, X_train, X_test, y_train, y_test)
