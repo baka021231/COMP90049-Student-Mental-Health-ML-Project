@@ -9,7 +9,7 @@ from sklearn.model_selection import GroupShuffleSplit
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE_PATH = ROOT / "final_student_day_table_v01_processed.csv"
-OUT_DIR = ROOT / "modeling_outputs"
+OUT_DIR = ROOT / "modeling_outputs" / "legacy_pipeline" / "00_model_data"
 CLEAN_PATH = OUT_DIR / "clean_model_data.csv"
 FEATURE_SETS_PATH = OUT_DIR / "feature_sets.json"
 SPLIT_PATH = OUT_DIR / "split_assignments.csv"
@@ -202,7 +202,7 @@ def build_audit(source: pd.DataFrame, clean: pd.DataFrame, split: pd.DataFrame) 
 
 
 def main() -> None:
-    OUT_DIR.mkdir(exist_ok=True)
+    OUT_DIR.mkdir(parents=True, exist_ok=True)
 
     source = read_source()
     clean = resolve_duplicates(source)

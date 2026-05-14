@@ -16,9 +16,11 @@ from modeling_utils import validate_features
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT_DIR = ROOT / "modeling_outputs"
-DATA_PATH = OUT_DIR / "clean_model_data.csv"
-FEATURE_SETS_PATH = OUT_DIR / "feature_sets.json"
+BASE_OUT_DIR = ROOT / "modeling_outputs" / "legacy_pipeline"
+DATA_DIR = BASE_OUT_DIR / "00_model_data"
+OUT_DIR = BASE_OUT_DIR / "01_rq1"
+DATA_PATH = DATA_DIR / "clean_model_data.csv"
+FEATURE_SETS_PATH = DATA_DIR / "feature_sets.json"
 RESULTS_PATH = OUT_DIR / "rq1_results.csv"
 SUMMARY_PATH = OUT_DIR / "rq1_summary.md"
 
@@ -111,7 +113,7 @@ def write_summary(
 
 
 def main() -> None:
-    OUT_DIR.mkdir(exist_ok=True)
+    OUT_DIR.mkdir(parents=True, exist_ok=True)
     data = load_modeling_data(DATA_PATH)
     features = load_feature_names()
     validate_features(data, features, "RQ1")

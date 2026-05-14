@@ -12,9 +12,11 @@ from modeling_utils import tune_models_with_group_cv
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT_DIR = ROOT / "modeling_outputs"
-DATA_PATH = OUT_DIR / "strict_model_data.csv"
-FEATURE_SETS_PATH = OUT_DIR / "strict_feature_sets.json"
+BASE_OUT_DIR = ROOT / "modeling_outputs" / "strict_pipeline"
+DATA_DIR = BASE_OUT_DIR / "03_model_data"
+OUT_DIR = BASE_OUT_DIR / "04_rq1"
+DATA_PATH = DATA_DIR / "strict_model_data.csv"
+FEATURE_SETS_PATH = DATA_DIR / "strict_feature_sets.json"
 RESULTS_PATH = OUT_DIR / "strict_rq1_results.csv"
 TUNING_PATH = OUT_DIR / "strict_rq1_tuning_results.csv"
 SUMMARY_PATH = OUT_DIR / "strict_rq1_summary.md"
@@ -171,7 +173,7 @@ def write_summary(
 
 
 def main() -> None:
-    OUT_DIR.mkdir(exist_ok=True)
+    OUT_DIR.mkdir(parents=True, exist_ok=True)
     data = load_data()
     features = load_features()
     validate_feature_columns(data, features)

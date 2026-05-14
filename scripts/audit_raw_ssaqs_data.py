@@ -9,7 +9,7 @@ import pandas as pd
 
 ROOT = Path(__file__).resolve().parents[1]
 RAW_DIR = ROOT / "SSAQS dataset"
-OUT_DIR = ROOT / "modeling_outputs"
+OUT_DIR = ROOT / "modeling_outputs" / "strict_pipeline" / "00_raw_audit"
 
 FILE_AUDIT_PATH = OUT_DIR / "raw_file_audit_by_student.csv"
 TARGET_COVERAGE_PATH = OUT_DIR / "raw_target_coverage_by_student_file.csv"
@@ -383,7 +383,7 @@ def main() -> None:
     if not RAW_DIR.exists():
         raise FileNotFoundError(f"Missing raw data directory: {RAW_DIR}")
 
-    OUT_DIR.mkdir(exist_ok=True)
+    OUT_DIR.mkdir(parents=True, exist_ok=True)
     file_audit, coverage, availability = build_audit_tables()
     summary = build_summary(file_audit, coverage, availability)
 

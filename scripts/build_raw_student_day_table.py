@@ -9,7 +9,7 @@ import pandas as pd
 
 ROOT = Path(__file__).resolve().parents[1]
 RAW_DIR = ROOT / "SSAQS dataset"
-OUT_DIR = ROOT / "modeling_outputs"
+OUT_DIR = ROOT / "modeling_outputs" / "strict_pipeline" / "01_raw_student_day"
 
 RAW_STUDENT_DAY_PATH = OUT_DIR / "raw_student_day_table.csv"
 MERGE_AUDIT_JSON_PATH = OUT_DIR / "raw_student_day_merge_audit.json"
@@ -438,7 +438,7 @@ def main() -> None:
     if not RAW_DIR.exists():
         raise FileNotFoundError(f"Missing raw data directory: {RAW_DIR}")
 
-    OUT_DIR.mkdir(exist_ok=True)
+    OUT_DIR.mkdir(parents=True, exist_ok=True)
     table = build_raw_student_day_table()
     audit = build_audit(table)
 

@@ -12,9 +12,11 @@ from modeling_utils import tune_models_with_group_cv
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT_DIR = ROOT / "modeling_outputs"
-DATA_PATH = OUT_DIR / "strict_model_data.csv"
-FEATURE_SETS_PATH = OUT_DIR / "strict_feature_sets.json"
+BASE_OUT_DIR = ROOT / "modeling_outputs" / "strict_pipeline"
+DATA_DIR = BASE_OUT_DIR / "03_model_data"
+OUT_DIR = BASE_OUT_DIR / "05_rq2"
+DATA_PATH = DATA_DIR / "strict_model_data.csv"
+FEATURE_SETS_PATH = DATA_DIR / "strict_feature_sets.json"
 RESULTS_PATH = OUT_DIR / "strict_rq2_feature_group_results.csv"
 BEST_RESULTS_PATH = OUT_DIR / "strict_rq2_best_by_feature_group.csv"
 TUNING_PATH = OUT_DIR / "strict_rq2_tuning_results.csv"
@@ -209,7 +211,7 @@ def write_summary(
 
 
 def main() -> None:
-    OUT_DIR.mkdir(exist_ok=True)
+    OUT_DIR.mkdir(parents=True, exist_ok=True)
     data = load_data()
     feature_groups = load_feature_groups()
     results, tuning_results = run_all_feature_groups(data, feature_groups)

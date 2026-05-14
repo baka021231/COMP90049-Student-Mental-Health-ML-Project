@@ -16,6 +16,7 @@ python scripts/run_strict_rq2_feature_groups.py
 - 严格版 RQ1 可以完整运行，并重新生成结果、调参记录、confusion matrix 和中文总结。
 - 严格版 RQ2 可以完整运行，并重新生成 feature group 结果、调参记录和中文总结。
 - 重新运行严格流程后没有产生 git diff，说明当前输出具有可复现性。
+- 严格流程输出已整理到 `modeling_outputs/strict_pipeline/` 下的分阶段文件夹。
 
 ## 当前严格版核心结果
 

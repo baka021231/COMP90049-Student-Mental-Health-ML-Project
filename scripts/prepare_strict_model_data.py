@@ -9,8 +9,9 @@ from sklearn.model_selection import GroupShuffleSplit
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT_DIR = ROOT / "modeling_outputs"
-SOURCE_PATH = OUT_DIR / "strict_clean_student_day_table.csv"
+BASE_OUT_DIR = ROOT / "modeling_outputs" / "strict_pipeline"
+SOURCE_PATH = BASE_OUT_DIR / "02_cleaned_student_day" / "strict_clean_student_day_table.csv"
+OUT_DIR = BASE_OUT_DIR / "03_model_data"
 STRICT_MODEL_DATA_PATH = OUT_DIR / "strict_model_data.csv"
 STRICT_FEATURE_SETS_PATH = OUT_DIR / "strict_feature_sets.json"
 STRICT_SPLIT_PATH = OUT_DIR / "strict_split_assignments.csv"
@@ -229,7 +230,7 @@ def write_report(data: pd.DataFrame, split: pd.DataFrame, audit: dict[str, Any])
 
 
 def main() -> None:
-    OUT_DIR.mkdir(exist_ok=True)
+    OUT_DIR.mkdir(parents=True, exist_ok=True)
     data = read_source()
     data = add_calendar_features(data)
     split = make_subject_split(data)

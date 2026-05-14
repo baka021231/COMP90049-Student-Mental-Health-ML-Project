@@ -8,8 +8,9 @@ import pandas as pd
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT_DIR = ROOT / "modeling_outputs"
-RAW_STUDENT_DAY_PATH = OUT_DIR / "raw_student_day_table.csv"
+BASE_OUT_DIR = ROOT / "modeling_outputs" / "strict_pipeline"
+RAW_STUDENT_DAY_PATH = BASE_OUT_DIR / "01_raw_student_day" / "raw_student_day_table.csv"
+OUT_DIR = BASE_OUT_DIR / "02_cleaned_student_day"
 STRICT_CLEAN_PATH = OUT_DIR / "strict_clean_student_day_table.csv"
 CLEANING_AUDIT_PATH = OUT_DIR / "strict_cleaning_audit.json"
 CLEANING_REPORT_PATH = OUT_DIR / "strict_cleaning_report.md"
@@ -271,7 +272,7 @@ def write_report(clean: pd.DataFrame, duplicates: pd.DataFrame, audit: dict[str,
 
 
 def main() -> None:
-    OUT_DIR.mkdir(exist_ok=True)
+    OUT_DIR.mkdir(parents=True, exist_ok=True)
     raw = read_raw_student_day_table()
     duplicates = duplicate_group_summary(raw)
     clean = resolve_duplicates(raw)
