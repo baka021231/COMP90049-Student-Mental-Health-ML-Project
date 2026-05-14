@@ -17,6 +17,8 @@ ROOT = Path(__file__).resolve().parents[1]
 OUT_DIR = ROOT / "modeling_outputs"
 DATA_PATH = OUT_DIR / "clean_model_data.csv"
 FEATURE_SETS_PATH = OUT_DIR / "feature_sets.json"
+RESULTS_PATH = OUT_DIR / "rq2_feature_group_results.csv"
+BEST_RESULTS_PATH = OUT_DIR / "rq2_best_by_feature_group.csv"
 
 RQ2_FEATURE_GROUPS_NAME = "rq2_feature_groups"
 
@@ -44,17 +46,27 @@ def run_feature_group_experiments(
     return pd.concat(result_frames, ignore_index=True)
 
 
-def main() -> None:
-    OUT_DIR.mkdir(exist_ok=True)
-    data = load_modeling_data(DATA_PATH)
-    feature_groups = load_feature_groups()
-    results = run_feature_group_experiments(data, feature_groups)
-    best_by_group = (
+def best_results_by_feature_group(results: pd.DataFrame) -> pd.DataFrame:
+    return (
         results.sort_values(["feature_group", "macro_f1"], ascending=[True, False])
         .groupby("feature_group", as_index=False, observed=True)
         .head(1)
         .reset_index(drop=True)
     )
+
+
+def save_results(results: pd.DataFrame, best_by_group: pd.DataFrame) -> None:
+    results.to_csv(RESULTS_PATH, index=False)
+    best_by_group.to_csv(BEST_RESULTS_PATH, index=False)
+
+
+def main() -> None:
+    OUT_DIR.mkdir(exist_ok=True)
+    data = load_modeling_data(DATA_PATH)
+    feature_groups = load_feature_groups()
+    results = run_feature_group_experiments(data, feature_groups)
+    best_by_group = best_results_by_feature_group(results)
+    save_results(results, best_by_group)
 
     print("Loaded RQ2 feature group data.")
     print(f"Input data: {DATA_PATH.relative_to(ROOT)}")
@@ -64,6 +76,8 @@ def main() -> None:
     print(f"Models per group: {len(build_models())}")
     print(f"Experiment rows: {len(results)}")
     print(f"Train/test labels use order: {LABEL_ORDER}")
+    print(f"Wrote {RESULTS_PATH.relative_to(ROOT)}")
+    print(f"Wrote {BEST_RESULTS_PATH.relative_to(ROOT)}")
     print("Best model by feature group:")
     for _, row in best_by_group.iterrows():
         print(
