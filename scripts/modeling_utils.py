@@ -355,5 +355,9 @@ def dataframe_to_markdown(data: pd.DataFrame) -> str:
         "| " + " | ".join(["---"] * len(headers)) + " |",
     ]
     for row in rows:
-        lines.append("| " + " | ".join(row) + " |")
+        clean_row = []
+        for item in row:
+            text = str(item)
+            clean_row.append("N/A" if text.lower() in {"nan", "none", "<na>"} else text)
+        lines.append("| " + " | ".join(clean_row) + " |")
     return "\n".join(lines)

@@ -1,0 +1,8 @@
+model,cv_macro_f1,best_params,n_candidates
+majority_baseline,,{},1
+logistic_regression,0.2886043335761568,"{""classifier__C"": 0.1}",3
+svm,0.3529110758143338,"{""classifier__C"": 10.0, ""classifier__kernel"": ""rbf""}",6
+knn,0.2961999288685041,"{""classifier__n_neighbors"": 3}",3
+random_forest,0.367954182500818,"{""classifier__max_depth"": 10, ""classifier__n_estimators"": 100}",6
+gradient_boosting,0.35326355359348904,"{""classifier__learning_rate"": 0.1, ""classifier__max_depth"": 3, ""classifier__n_estimators"": 200}",8
+mlp,0.3621691858903974,"{""classifier__alpha"": 0.001, ""classifier__hidden_layer_sizes"": [64]}",6
