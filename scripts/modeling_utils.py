@@ -4,8 +4,14 @@ import json
 from pathlib import Path
 
 import pandas as pd
+from sklearn.base import clone
 from sklearn.dummy import DummyClassifier
 from sklearn.ensemble import RandomForestClassifier
+from sklearn.ensemble import GradientBoostingClassifier
+from sklearn.impute import SimpleImputer
+from sklearn.model_selection import GridSearchCV
+from sklearn.model_selection import GroupKFold
+from sklearn.neighbors import KNeighborsClassifier
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score
 from sklearn.metrics import confusion_matrix
@@ -115,6 +121,116 @@ def build_models() -> dict[str, object]:
     }
 
 
+def build_strict_model_specs() -> dict[str, tuple[object, dict[str, list]]]:
+    return {
+        "majority_baseline": (
+            Pipeline(
+                steps=[
+                    ("imputer", SimpleImputer(strategy="median")),
+                    ("classifier", DummyClassifier(strategy="most_frequent")),
+                ]
+            ),
+            {},
+        ),
+        "logistic_regression": (
+            Pipeline(
+                steps=[
+                    ("imputer", SimpleImputer(strategy="median")),
+                    ("scaler", StandardScaler()),
+                    (
+                        "classifier",
+                        LogisticRegression(
+                            max_iter=2000,
+                            class_weight="balanced",
+                            random_state=RANDOM_SEED,
+                        ),
+                    ),
+                ]
+            ),
+            {"classifier__C": [0.1, 1.0, 10.0]},
+        ),
+        "svm": (
+            Pipeline(
+                steps=[
+                    ("imputer", SimpleImputer(strategy="median")),
+                    ("scaler", StandardScaler()),
+                    (
+                        "classifier",
+                        SVC(
+                            class_weight="balanced",
+                            random_state=RANDOM_SEED,
+                        ),
+                    ),
+                ]
+            ),
+            {
+                "classifier__C": [0.1, 1.0, 10.0],
+                "classifier__kernel": ["linear", "rbf"],
+            },
+        ),
+        "knn": (
+            Pipeline(
+                steps=[
+                    ("imputer", SimpleImputer(strategy="median")),
+                    ("scaler", StandardScaler()),
+                    ("classifier", KNeighborsClassifier()),
+                ]
+            ),
+            {"classifier__n_neighbors": [3, 5, 9]},
+        ),
+        "random_forest": (
+            Pipeline(
+                steps=[
+                    ("imputer", SimpleImputer(strategy="median")),
+                    (
+                        "classifier",
+                        RandomForestClassifier(
+                            class_weight="balanced",
+                            random_state=RANDOM_SEED,
+                        ),
+                    ),
+                ]
+            ),
+            {
+                "classifier__n_estimators": [100, 300],
+                "classifier__max_depth": [5, 10, None],
+            },
+        ),
+        "gradient_boosting": (
+            Pipeline(
+                steps=[
+                    ("imputer", SimpleImputer(strategy="median")),
+                    ("classifier", GradientBoostingClassifier(random_state=RANDOM_SEED)),
+                ]
+            ),
+            {
+                "classifier__n_estimators": [100, 200],
+                "classifier__learning_rate": [0.05, 0.1],
+                "classifier__max_depth": [2, 3],
+            },
+        ),
+        "mlp": (
+            Pipeline(
+                steps=[
+                    ("imputer", SimpleImputer(strategy="median")),
+                    ("scaler", StandardScaler()),
+                    (
+                        "classifier",
+                        MLPClassifier(
+                            max_iter=3000,
+                            random_state=RANDOM_SEED,
+                        ),
+                    ),
+                ]
+            ),
+            {
+                "classifier__hidden_layer_sizes": [(32,), (64,), (32, 16)],
+                "classifier__alpha": [0.0001, 0.001],
+            },
+        ),
+    }
+
+
 def fit_models(
     models: dict[str, object], X_train: pd.DataFrame, y_train: pd.Series
 ) -> dict[str, object]:
@@ -123,6 +239,57 @@ def fit_models(
         model.fit(X_train, y_train)
         fitted_models[model_name] = model
     return fitted_models
+
+
+def tune_models_with_group_cv(
+    model_specs: dict[str, tuple[object, dict[str, list]]],
+    X_train: pd.DataFrame,
+    y_train: pd.Series,
+    groups_train: pd.Series,
+    n_splits: int = 5,
+) -> tuple[dict[str, object], pd.DataFrame]:
+    unique_groups = groups_train.nunique()
+    if unique_groups < 2:
+        raise ValueError("Group-aware tuning requires at least two training students.")
+
+    cv = GroupKFold(n_splits=min(n_splits, unique_groups))
+    fitted_models = {}
+    tuning_rows = []
+    for model_name, (estimator, param_grid) in model_specs.items():
+        if param_grid:
+            search = GridSearchCV(
+                estimator=estimator,
+                param_grid=param_grid,
+                scoring="f1_macro",
+                cv=cv,
+                n_jobs=-1,
+                refit=True,
+            )
+            search.fit(X_train, y_train, groups=groups_train)
+            fitted_models[model_name] = search.best_estimator_
+            tuning_rows.append(
+                {
+                    "model": model_name,
+                    "cv_macro_f1": search.best_score_,
+                    "best_params": json.dumps(search.best_params_, sort_keys=True),
+                    "n_candidates": len(search.cv_results_["params"]),
+                }
+            )
+        else:
+            fitted = clone(estimator)
+            fitted.fit(X_train, y_train)
+            fitted_models[model_name] = fitted
+            tuning_rows.append(
+                {
+                    "model": model_name,
+                    "cv_macro_f1": pd.NA,
+                    "best_params": "{}",
+                    "n_candidates": 1,
+                }
+            )
+
+    tuning_results = pd.DataFrame(tuning_rows)
+    return fitted_models, tuning_results
 
 
 def evaluate_models(
