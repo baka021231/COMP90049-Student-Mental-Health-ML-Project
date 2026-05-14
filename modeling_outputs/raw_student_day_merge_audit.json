@@ -1,0 +1,48 @@
+{
+  "source_directory": "SSAQS dataset",
+  "rows": 3133,
+  "students": 35,
+  "unique_student_days": 3118,
+  "date_min": "2025-02-14",
+  "date_max": "2025-07-09",
+  "duplicate_student_day_rows": 15,
+  "duplicate_student_day_pairs": 15,
+  "label_counts": {
+    "Low": 1086,
+    "High": 1057,
+    "Medium": 990
+  },
+  "wearable_missing_cells": 14280,
+  "wearable_total_cells": 37596,
+  "wearable_missing_percent": 37.98,
+  "missing_by_column": {
+    "sleep_score": 1623,
+    "deep_sleep_minutes": 1623,
+    "total_steps": 889,
+    "sedentary_minutes": 864,
+    "lightly_active_minutes": 864,
+    "moderately_active_minutes": 864,
+    "very_active_minutes": 864,
+    "avg_rmssd": 1487,
+    "avg_low_frequency": 1487,
+    "avg_high_frequency": 1487,
+    "avg_oxygen": 1113,
+    "std_oxygen": 1115,
+    "STRESS_SCORE": 1657,
+    "CALCULATION_FAILED": 1657
+  },
+  "comparison_with_reference_final_student_day_table_v01": {
+    "reference_exists": true,
+    "reference_rows": 3135,
+    "reference_unique_student_days": 3118,
+    "rebuilt_rows": 3133,
+    "rebuilt_unique_student_days": 3118,
+    "common_unique_student_days": 3118,
+    "reference_only_student_days": 0,
+    "rebuilt_only_student_days": 0,
+    "common_grouped_student_days": 3118,
+    "common_student_days_with_different_row_counts": 2,
+    "common_student_days_with_different_stress_values": 2,
+    "common_student_days_with_different_anxiety_values": 2
+  }
+}
