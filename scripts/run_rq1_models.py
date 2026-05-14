@@ -7,6 +7,8 @@ import pandas as pd
 from sklearn.dummy import DummyClassifier
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import accuracy_score
+from sklearn.metrics import precision_recall_fscore_support
 from sklearn.neural_network import MLPClassifier
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
@@ -132,6 +134,48 @@ def fit_models(
     return fitted_models
 
 
+def evaluate_models(
+    fitted_models: dict[str, object], X_test: pd.DataFrame, y_test: pd.Series
+) -> pd.DataFrame:
+    rows = []
+    for model_name, model in fitted_models.items():
+        y_pred = model.predict(X_test)
+        macro_precision, macro_recall, macro_f1, _ = precision_recall_fscore_support(
+            y_test,
+            y_pred,
+            average="macro",
+            zero_division=0,
+        )
+        _, _, per_class_f1, per_class_support = precision_recall_fscore_support(
+            y_test,
+            y_pred,
+            labels=LABEL_ORDER,
+            zero_division=0,
+        )
+
+        rows.append(
+            {
+                "model": model_name,
+                "accuracy": accuracy_score(y_test, y_pred),
+                "macro_precision": macro_precision,
+                "macro_recall": macro_recall,
+                "macro_f1": macro_f1,
+                "low_f1": per_class_f1[0],
+                "medium_f1": per_class_f1[1],
+                "high_f1": per_class_f1[2],
+                "low_support": int(per_class_support[0]),
+                "medium_support": int(per_class_support[1]),
+                "high_support": int(per_class_support[2]),
+            }
+        )
+
+    return pd.DataFrame(rows).sort_values("macro_f1", ascending=False)
+
+
+def save_results(results: pd.DataFrame) -> None:
+    results.to_csv(RESULTS_PATH, index=False)
+
+
 def main() -> None:
     OUT_DIR.mkdir(exist_ok=True)
     data = load_modeling_data()
@@ -140,6 +184,8 @@ def main() -> None:
     X_train, y_train, X_test, y_test = make_train_test_data(data, features)
     models = build_models()
     fitted_models = fit_models(models, X_train, y_train)
+    results = evaluate_models(fitted_models, X_test, y_test)
+    save_results(results)
 
     print("Loaded RQ1 modeling data.")
     print(f"Input data: {DATA_PATH.relative_to(ROOT)}")
@@ -150,6 +196,7 @@ def main() -> None:
     print(f"Train labels: {y_train.value_counts().reindex(LABEL_ORDER, fill_value=0).to_dict()}")
     print(f"Test labels: {y_test.value_counts().reindex(LABEL_ORDER, fill_value=0).to_dict()}")
     print(f"Fitted models: {', '.join(fitted_models)}")
+    print(f"Wrote {RESULTS_PATH.relative_to(ROOT)}")
 
 
 if __name__ == "__main__":
