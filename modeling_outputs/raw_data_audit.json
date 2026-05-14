@@ -1,0 +1,89 @@
+{
+  "raw_dir": "SSAQS dataset",
+  "student_dirs": 35,
+  "expected_student_files": [
+    "daily_questions.csv",
+    "sleep.csv",
+    "activity_level.csv",
+    "steps.csv",
+    "hrv.csv",
+    "oxygen.csv",
+    "stress.csv"
+  ],
+  "file_counts": {
+    "activity_level.csv": 32,
+    "daily_questions.csv": 35,
+    "hrv.csv": 32,
+    "oxygen.csv": 32,
+    "sleep.csv": 32,
+    "steps.csv": 32,
+    "stress.csv": 32
+  },
+  "students_with_all_expected_files": 32,
+  "total_target_days": 3118,
+  "complete_wearable_target_days": 1482,
+  "complete_wearable_target_percent": 47.53,
+  "daily_questions": {
+    "daily_question_rows": 3133,
+    "daily_question_students": 35,
+    "daily_question_unique_student_days": 3118,
+    "daily_question_duplicate_student_day_pairs": 15,
+    "has_stress_label_column": false,
+    "stress_label_mismatches_under_current_rule": null,
+    "stress_min": 0.0,
+    "stress_max": 100.0,
+    "stress_missing_rows": 0,
+    "anxiety_missing_rows": 0
+  },
+  "coverage_by_file": [
+    {
+      "file": "activity_level.csv",
+      "total_target_days": 3118,
+      "covered_target_days": 2257,
+      "mean_student_coverage_percent": 69.19514285714286,
+      "overall_target_coverage_percent": 72.39
+    },
+    {
+      "file": "daily_questions.csv",
+      "total_target_days": 3118,
+      "covered_target_days": 3118,
+      "mean_student_coverage_percent": 100.0,
+      "overall_target_coverage_percent": 100.0
+    },
+    {
+      "file": "hrv.csv",
+      "total_target_days": 3118,
+      "covered_target_days": 1637,
+      "mean_student_coverage_percent": 48.98657142857143,
+      "overall_target_coverage_percent": 52.5
+    },
+    {
+      "file": "oxygen.csv",
+      "total_target_days": 3118,
+      "covered_target_days": 2009,
+      "mean_student_coverage_percent": 61.16228571428571,
+      "overall_target_coverage_percent": 64.43
+    },
+    {
+      "file": "sleep.csv",
+      "total_target_days": 3118,
+      "covered_target_days": 1501,
+      "mean_student_coverage_percent": 44.60885714285714,
+      "overall_target_coverage_percent": 48.14
+    },
+    {
+      "file": "steps.csv",
+      "total_target_days": 3118,
+      "covered_target_days": 2232,
+      "mean_student_coverage_percent": 68.486,
+      "overall_target_coverage_percent": 71.58
+    },
+    {
+      "file": "stress.csv",
+      "total_target_days": 3118,
+      "covered_target_days": 1466,
+      "mean_student_coverage_percent": 43.68142857142857,
+      "overall_target_coverage_percent": 47.02
+    }
+  ]
+}

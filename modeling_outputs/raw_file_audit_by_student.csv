@@ -1,0 +1,246 @@
+student_id,file,exists,rows,columns,unique_dates,missing_value_cells,total_value_cells,missing_value_percent,min_date,max_date
+1,daily_questions.csv,1,121,"timeStampScheduled, timeStampSent, timeStampStart, timeStampStop, originalTimeStampSent, timeZoneOffset, deltaUTC, stress, anxiety",121,0,242,0.0,2025-02-19,2025-06-22
+1,sleep.csv,1,31,"timestamp, overall_score, deep_sleep_in_minutes",31,0,62,0.0,2025-02-23,2025-05-09
+1,activity_level.csv,1,53975,"timestamp, level",106,0,53975,0.0,2025-02-21,2025-06-06
+1,steps.csv,1,13067,"timestamp, steps",106,0,13067,0.0,2025-02-21,2025-06-06
+1,hrv.csv,1,2930,"timestamp, rmssd, coverage, low_frequency, high_frequency",45,0,11720,0.0,2025-02-23,2025-05-09
+1,oxygen.csv,1,17788,"timestamp, value",70,0,17788,0.0,2025-02-21,2025-05-11
+1,stress.csv,1,28,"DATE, UPDATED_AT, STRESS_SCORE, CALCULATION_FAILED",28,0,56,0.0,2025-02-22,2025-05-09
+2,daily_questions.csv,1,102,"timeStampScheduled, timeStampSent, timeStampStart, timeStampStop, originalTimeStampSent, timeZoneOffset, deltaUTC, stress, anxiety",102,0,204,0.0,2025-02-18,2025-06-13
+2,sleep.csv,1,10,"timestamp, overall_score, deep_sleep_in_minutes",10,0,20,0.0,2025-02-25,2025-05-07
+2,activity_level.csv,1,36316,"timestamp, level",69,0,36316,0.0,2025-02-24,2025-05-28
+2,steps.csv,1,12464,"timestamp, steps",61,0,12464,0.0,2025-02-24,2025-05-09
+2,hrv.csv,1,698,"timestamp, rmssd, coverage, low_frequency, high_frequency",13,0,2792,0.0,2025-02-24,2025-05-07
+2,oxygen.csv,1,12317,"timestamp, value",74,0,12317,0.0,2025-02-25,2025-06-11
+2,stress.csv,1,10,"DATE, UPDATED_AT, STRESS_SCORE, CALCULATION_FAILED",9,0,20,0.0,2025-02-25,2025-05-08
+3,daily_questions.csv,1,14,"timeStampScheduled, timeStampSent, timeStampStart, timeStampStop, originalTimeStampSent, timeZoneOffset, deltaUTC, stress, anxiety",14,0,28,0.0,2025-02-26,2025-04-29
+3,sleep.csv,0,0,,0,0,0,0.0,,
+3,activity_level.csv,0,0,,0,0,0,0.0,,
+3,steps.csv,0,0,,0,0,0,0.0,,
+3,hrv.csv,0,0,,0,0,0,0.0,,
+3,oxygen.csv,0,0,,0,0,0,0.0,,
+3,stress.csv,0,0,,0,0,0,0.0,,
+4,daily_questions.csv,1,118,"timeStampScheduled, timeStampSent, timeStampStart, timeStampStop, originalTimeStampSent, timeZoneOffset, deltaUTC, stress, anxiety",118,0,236,0.0,2025-02-14,2025-06-13
+4,sleep.csv,1,13,"timestamp, overall_score, deep_sleep_in_minutes",13,0,26,0.0,2025-02-25,2025-05-05
+4,activity_level.csv,1,23715,"timestamp, level",45,0,23715,0.0,2025-02-24,2025-05-05
+4,steps.csv,1,4812,"timestamp, steps",45,0,4812,0.0,2025-02-24,2025-05-05
+4,hrv.csv,1,1217,"timestamp, rmssd, coverage, low_frequency, high_frequency",16,0,4868,0.0,2025-02-24,2025-05-05
+4,oxygen.csv,1,10296,"timestamp, value",27,0,10296,0.0,2025-02-24,2025-05-05
+4,stress.csv,1,9,"DATE, UPDATED_AT, STRESS_SCORE, CALCULATION_FAILED",9,0,18,0.0,2025-02-24,2025-05-05
+5,daily_questions.csv,1,135,"timeStampScheduled, timeStampSent, timeStampStart, timeStampStop, originalTimeStampSent, timeZoneOffset, deltaUTC, stress, anxiety",133,0,270,0.0,2025-02-14,2025-06-29
+5,sleep.csv,1,100,"timestamp, overall_score, deep_sleep_in_minutes",100,0,200,0.0,2025-02-21,2025-06-09
+5,activity_level.csv,1,75180,"timestamp, level",106,0,75180,0.0,2025-02-21,2025-06-10
+5,steps.csv,1,26461,"timestamp, steps",106,0,26461,0.0,2025-02-21,2025-06-10
+5,hrv.csv,1,6754,"timestamp, rmssd, coverage, low_frequency, high_frequency",100,0,27016,0.0,2025-02-21,2025-06-08
+5,oxygen.csv,1,43156,"timestamp, value",104,0,43156,0.0,2025-02-21,2025-06-09
+5,stress.csv,1,89,"DATE, UPDATED_AT, STRESS_SCORE, CALCULATION_FAILED",89,0,178,0.0,2025-02-21,2025-06-09
+6,daily_questions.csv,1,105,"timeStampScheduled, timeStampSent, timeStampStart, timeStampStop, originalTimeStampSent, timeZoneOffset, deltaUTC, stress, anxiety",104,0,210,0.0,2025-02-21,2025-06-20
+6,sleep.csv,1,44,"timestamp, overall_score, deep_sleep_in_minutes",44,0,88,0.0,2025-02-21,2025-06-07
+6,activity_level.csv,1,50036,"timestamp, level",71,0,50036,0.0,2025-02-20,2025-05-31
+6,steps.csv,1,22695,"timestamp, steps",69,0,22695,0.0,2025-02-20,2025-05-31
+6,hrv.csv,1,4375,"timestamp, rmssd, coverage, low_frequency, high_frequency",61,0,17500,0.0,2025-02-20,2025-06-07
+6,oxygen.csv,1,26713,"timestamp, value",65,0,26713,0.0,2025-02-21,2025-06-08
+6,stress.csv,1,49,"DATE, UPDATED_AT, STRESS_SCORE, CALCULATION_FAILED",49,0,98,0.0,2025-02-21,2025-06-07
+7,daily_questions.csv,1,103,"timeStampScheduled, timeStampSent, timeStampStart, timeStampStop, originalTimeStampSent, timeZoneOffset, deltaUTC, stress, anxiety",102,0,206,0.0,2025-02-17,2025-06-11
+7,sleep.csv,1,95,"timestamp, overall_score, deep_sleep_in_minutes",95,0,190,0.0,2025-02-21,2025-06-07
+7,activity_level.csv,1,91140,"timestamp, level",109,0,91140,0.0,2025-02-20,2025-06-09
+7,steps.csv,1,30896,"timestamp, steps",107,0,30896,0.0,2025-02-20,2025-06-09
+7,hrv.csv,1,7636,"timestamp, rmssd, coverage, low_frequency, high_frequency",103,0,30544,0.0,2025-02-21,2025-06-07
+7,oxygen.csv,1,43232,"timestamp, value",105,0,43232,0.0,2025-02-21,2025-06-08
+7,stress.csv,1,84,"DATE, UPDATED_AT, STRESS_SCORE, CALCULATION_FAILED",84,0,168,0.0,2025-02-21,2025-06-07
+8,daily_questions.csv,1,104,"timeStampScheduled, timeStampSent, timeStampStart, timeStampStop, originalTimeStampSent, timeZoneOffset, deltaUTC, stress, anxiety",104,0,208,0.0,2025-02-17,2025-06-11
+8,sleep.csv,1,103,"timestamp, overall_score, deep_sleep_in_minutes",100,0,206,0.0,2025-02-21,2025-06-09
+8,activity_level.csv,1,76525,"timestamp, level",110,0,76525,0.0,2025-02-20,2025-06-09
+8,steps.csv,1,30659,"timestamp, steps",110,0,30659,0.0,2025-02-20,2025-06-09
+8,hrv.csv,1,8385,"timestamp, rmssd, coverage, low_frequency, high_frequency",102,0,33540,0.0,2025-02-20,2025-06-08
+8,oxygen.csv,1,50475,"timestamp, value",109,0,50475,0.0,2025-02-21,2025-06-09
+8,stress.csv,1,91,"DATE, UPDATED_AT, STRESS_SCORE, CALCULATION_FAILED",91,0,182,0.0,2025-02-21,2025-06-09
+9,daily_questions.csv,1,60,"timeStampScheduled, timeStampSent, timeStampStart, timeStampStop, originalTimeStampSent, timeZoneOffset, deltaUTC, stress, anxiety",60,0,120,0.0,2025-02-22,2025-06-13
+9,sleep.csv,1,63,"timestamp, overall_score, deep_sleep_in_minutes",61,0,126,0.0,2025-02-21,2025-06-04
+9,activity_level.csv,1,66060,"timestamp, level",111,0,66060,0.0,2025-02-20,2025-06-12
+9,steps.csv,1,23063,"timestamp, steps",111,0,23063,0.0,2025-02-20,2025-06-12
+9,hrv.csv,1,5745,"timestamp, rmssd, coverage, low_frequency, high_frequency",71,0,22980,0.0,2025-02-20,2025-06-04
+9,oxygen.csv,1,36774,"timestamp, value",86,0,36774,0.0,2025-02-21,2025-06-04
+9,stress.csv,1,63,"DATE, UPDATED_AT, STRESS_SCORE, CALCULATION_FAILED",63,0,126,0.0,2025-02-21,2025-06-04
+10,daily_questions.csv,1,115,"timeStampScheduled, timeStampSent, timeStampStart, timeStampStop, originalTimeStampSent, timeZoneOffset, deltaUTC, stress, anxiety",115,0,230,0.0,2025-02-20,2025-06-22
+10,sleep.csv,1,42,"timestamp, overall_score, deep_sleep_in_minutes",42,0,84,0.0,2025-02-21,2025-06-03
+10,activity_level.csv,1,48406,"timestamp, level",102,0,48406,0.0,2025-02-20,2025-06-10
+10,steps.csv,1,19739,"timestamp, steps",100,0,19739,0.0,2025-02-20,2025-06-10
+10,hrv.csv,1,3456,"timestamp, rmssd, coverage, low_frequency, high_frequency",58,0,13824,0.0,2025-02-20,2025-06-03
+10,oxygen.csv,1,22849,"timestamp, value",92,0,22849,0.0,2025-02-21,2025-06-10
+10,stress.csv,1,38,"DATE, UPDATED_AT, STRESS_SCORE, CALCULATION_FAILED",38,0,76,0.0,2025-02-21,2025-06-03
+11,daily_questions.csv,1,39,"timeStampScheduled, timeStampSent, timeStampStart, timeStampStop, originalTimeStampSent, timeZoneOffset, deltaUTC, stress, anxiety",39,0,78,0.0,2025-02-25,2025-05-15
+11,sleep.csv,1,26,"timestamp, overall_score, deep_sleep_in_minutes",26,0,52,0.0,2025-02-25,2025-06-01
+11,activity_level.csv,1,42390,"timestamp, level",107,0,42390,0.0,2025-02-25,2025-06-11
+11,steps.csv,1,17890,"timestamp, steps",107,0,17890,0.0,2025-02-25,2025-06-11
+11,hrv.csv,1,2120,"timestamp, rmssd, coverage, low_frequency, high_frequency",30,0,8480,0.0,2025-02-25,2025-06-01
+11,oxygen.csv,1,15949,"timestamp, value",80,0,15949,0.0,2025-02-25,2025-06-08
+11,stress.csv,1,28,"DATE, UPDATED_AT, STRESS_SCORE, CALCULATION_FAILED",28,0,56,0.0,2025-02-25,2025-06-01
+12,daily_questions.csv,1,55,"timeStampScheduled, timeStampSent, timeStampStart, timeStampStop, originalTimeStampSent, timeZoneOffset, deltaUTC, stress, anxiety",55,0,110,0.0,2025-02-16,2025-06-03
+12,sleep.csv,0,0,,0,0,0,0.0,,
+12,activity_level.csv,0,0,,0,0,0,0.0,,
+12,steps.csv,0,0,,0,0,0,0.0,,
+12,hrv.csv,0,0,,0,0,0,0.0,,
+12,oxygen.csv,0,0,,0,0,0,0.0,,
+12,stress.csv,0,0,,0,0,0,0.0,,
+13,daily_questions.csv,1,88,"timeStampScheduled, timeStampSent, timeStampStart, timeStampStop, originalTimeStampSent, timeZoneOffset, deltaUTC, stress, anxiety",86,0,176,0.0,2025-02-19,2025-06-07
+13,sleep.csv,1,88,"timestamp, overall_score, deep_sleep_in_minutes",86,0,176,0.0,2025-02-26,2025-06-08
+13,activity_level.csv,1,63841,"timestamp, level",101,0,63841,0.0,2025-02-25,2025-06-08
+13,steps.csv,1,22068,"timestamp, steps",99,0,22068,0.0,2025-02-25,2025-06-08
+13,hrv.csv,1,7010,"timestamp, rmssd, coverage, low_frequency, high_frequency",86,0,28040,0.0,2025-02-26,2025-06-07
+13,oxygen.csv,1,41817,"timestamp, value",95,0,41817,0.0,2025-02-27,2025-06-08
+13,stress.csv,1,76,"DATE, UPDATED_AT, STRESS_SCORE, CALCULATION_FAILED",76,0,152,0.0,2025-02-26,2025-06-08
+14,daily_questions.csv,1,40,"timeStampScheduled, timeStampSent, timeStampStart, timeStampStop, originalTimeStampSent, timeZoneOffset, deltaUTC, stress, anxiety",39,0,80,0.0,2025-02-20,2025-04-12
+14,sleep.csv,0,0,,0,0,0,0.0,,
+14,activity_level.csv,0,0,,0,0,0,0.0,,
+14,steps.csv,0,0,,0,0,0,0.0,,
+14,hrv.csv,0,0,,0,0,0,0.0,,
+14,oxygen.csv,0,0,,0,0,0,0.0,,
+14,stress.csv,0,0,,0,0,0,0.0,,
+15,daily_questions.csv,1,59,"timeStampScheduled, timeStampSent, timeStampStart, timeStampStop, originalTimeStampSent, timeZoneOffset, deltaUTC, stress, anxiety",58,0,118,0.0,2025-02-24,2025-06-07
+15,sleep.csv,1,25,"timestamp, overall_score, deep_sleep_in_minutes",24,0,50,0.0,2025-02-25,2025-04-02
+15,activity_level.csv,1,26695,"timestamp, level",39,0,26695,0.0,2025-02-25,2025-04-04
+15,steps.csv,1,10105,"timestamp, steps",38,0,10105,0.0,2025-02-25,2025-04-03
+15,hrv.csv,1,2123,"timestamp, rmssd, coverage, low_frequency, high_frequency",30,0,8492,0.0,2025-02-25,2025-04-02
+15,oxygen.csv,1,13249,"timestamp, value",34,0,13249,0.0,2025-02-25,2025-04-03
+15,stress.csv,1,18,"DATE, UPDATED_AT, STRESS_SCORE, CALCULATION_FAILED",18,0,36,0.0,2025-02-25,2025-04-02
+16,daily_questions.csv,1,71,"timeStampScheduled, timeStampSent, timeStampStart, timeStampStop, originalTimeStampSent, timeZoneOffset, deltaUTC, stress, anxiety",71,0,142,0.0,2025-02-17,2025-06-19
+16,sleep.csv,1,69,"timestamp, overall_score, deep_sleep_in_minutes",68,0,138,0.0,2025-02-19,2025-05-05
+16,activity_level.csv,1,48506,"timestamp, level",77,0,48506,0.0,2025-02-18,2025-05-05
+16,steps.csv,1,17923,"timestamp, steps",77,0,17923,0.0,2025-02-18,2025-05-05
+16,hrv.csv,1,5774,"timestamp, rmssd, coverage, low_frequency, high_frequency",73,0,23096,0.0,2025-02-18,2025-05-04
+16,oxygen.csv,1,38349,"timestamp, value",76,0,38349,0.0,2025-02-18,2025-05-05
+16,stress.csv,1,64,"DATE, UPDATED_AT, STRESS_SCORE, CALCULATION_FAILED",64,0,128,0.0,2025-02-18,2025-05-05
+17,daily_questions.csv,1,116,"timeStampScheduled, timeStampSent, timeStampStart, timeStampStop, originalTimeStampSent, timeZoneOffset, deltaUTC, stress, anxiety",116,0,232,0.0,2025-02-24,2025-06-21
+17,sleep.csv,1,14,"timestamp, overall_score, deep_sleep_in_minutes",14,0,28,0.0,2025-02-28,2025-06-09
+17,activity_level.csv,1,35659,"timestamp, level",81,0,35659,0.0,2025-02-27,2025-06-10
+17,steps.csv,1,10185,"timestamp, steps",80,0,10185,0.0,2025-02-27,2025-06-10
+17,hrv.csv,1,1355,"timestamp, rmssd, coverage, low_frequency, high_frequency",19,0,5420,0.0,2025-02-28,2025-06-05
+17,oxygen.csv,1,11265,"timestamp, value",38,0,11265,0.0,2025-02-27,2025-06-10
+17,stress.csv,1,17,"DATE, UPDATED_AT, STRESS_SCORE, CALCULATION_FAILED",17,0,34,0.0,2025-03-05,2025-06-09
+18,daily_questions.csv,1,83,"timeStampScheduled, timeStampSent, timeStampStart, timeStampStop, originalTimeStampSent, timeZoneOffset, deltaUTC, stress, anxiety",82,0,166,0.0,2025-02-24,2025-06-09
+18,sleep.csv,1,56,"timestamp, overall_score, deep_sleep_in_minutes",54,0,112,0.0,2025-02-26,2025-06-09
+18,activity_level.csv,1,50607,"timestamp, level",89,0,50607,0.0,2025-02-25,2025-06-09
+18,steps.csv,1,16382,"timestamp, steps",87,0,16382,0.0,2025-02-25,2025-06-09
+18,hrv.csv,1,4672,"timestamp, rmssd, coverage, low_frequency, high_frequency",60,0,18688,0.0,2025-02-25,2025-06-09
+18,oxygen.csv,1,32064,"timestamp, value",82,0,32064,0.0,2025-02-25,2025-06-09
+18,stress.csv,1,49,"DATE, UPDATED_AT, STRESS_SCORE, CALCULATION_FAILED",49,0,98,0.0,2025-02-25,2025-06-09
+19,daily_questions.csv,1,116,"timeStampScheduled, timeStampSent, timeStampStart, timeStampStop, originalTimeStampSent, timeZoneOffset, deltaUTC, stress, anxiety",114,0,232,0.0,2025-02-19,2025-06-23
+19,sleep.csv,1,49,"timestamp, overall_score, deep_sleep_in_minutes",49,0,98,0.0,2025-02-26,2025-05-08
+19,activity_level.csv,1,38396,"timestamp, level",66,0,38396,0.0,2025-02-25,2025-05-08
+19,steps.csv,1,11416,"timestamp, steps",64,0,11416,0.0,2025-02-25,2025-05-08
+19,hrv.csv,1,4556,"timestamp, rmssd, coverage, low_frequency, high_frequency",50,0,18224,0.0,2025-02-25,2025-05-07
+19,oxygen.csv,1,27540,"timestamp, value",60,0,27540,0.0,2025-02-25,2025-05-08
+19,stress.csv,1,46,"DATE, UPDATED_AT, STRESS_SCORE, CALCULATION_FAILED",46,0,92,0.0,2025-02-25,2025-05-08
+20,daily_questions.csv,1,100,"timeStampScheduled, timeStampSent, timeStampStart, timeStampStop, originalTimeStampSent, timeZoneOffset, deltaUTC, stress, anxiety",100,0,200,0.0,2025-02-19,2025-06-20
+20,sleep.csv,1,69,"timestamp, overall_score, deep_sleep_in_minutes",66,0,138,0.0,2025-02-18,2025-06-07
+20,activity_level.csv,1,83082,"timestamp, level",112,0,83082,0.0,2025-02-18,2025-06-09
+20,steps.csv,1,24425,"timestamp, steps",112,0,24425,0.0,2025-02-18,2025-06-09
+20,hrv.csv,1,5398,"timestamp, rmssd, coverage, low_frequency, high_frequency",72,0,21592,0.0,2025-02-18,2025-06-07
+20,oxygen.csv,1,35145,"timestamp, value",94,0,35145,0.0,2025-02-18,2025-06-08
+20,stress.csv,1,70,"DATE, UPDATED_AT, STRESS_SCORE, CALCULATION_FAILED",70,0,140,0.0,2025-02-18,2025-06-08
+21,daily_questions.csv,1,59,"timeStampScheduled, timeStampSent, timeStampStart, timeStampStop, originalTimeStampSent, timeZoneOffset, deltaUTC, stress, anxiety",59,0,118,0.0,2025-03-13,2025-06-30
+21,sleep.csv,1,32,"timestamp, overall_score, deep_sleep_in_minutes",32,0,64,0.0,2025-03-14,2025-06-28
+21,activity_level.csv,1,42105,"timestamp, level",68,0,42105,0.0,2025-03-13,2025-07-01
+21,steps.csv,1,13981,"timestamp, steps",67,0,13981,0.0,2025-03-13,2025-07-01
+21,hrv.csv,1,2131,"timestamp, rmssd, coverage, low_frequency, high_frequency",32,0,8524,0.0,2025-03-14,2025-06-28
+21,oxygen.csv,1,17191,"timestamp, value",56,0,17191,0.0,2025-03-15,2025-06-30
+21,stress.csv,1,32,"DATE, UPDATED_AT, STRESS_SCORE, CALCULATION_FAILED",32,0,64,0.0,2025-03-14,2025-06-28
+22,daily_questions.csv,1,117,"timeStampScheduled, timeStampSent, timeStampStart, timeStampStop, originalTimeStampSent, timeZoneOffset, deltaUTC, stress, anxiety",117,0,234,0.0,2025-03-05,2025-07-09
+22,sleep.csv,1,49,"timestamp, overall_score, deep_sleep_in_minutes",48,0,98,0.0,2025-03-16,2025-06-30
+22,activity_level.csv,1,68352,"timestamp, level",98,0,68352,0.0,2025-03-15,2025-06-30
+22,steps.csv,1,26500,"timestamp, steps",97,0,26500,0.0,2025-03-15,2025-06-30
+22,hrv.csv,1,3724,"timestamp, rmssd, coverage, low_frequency, high_frequency",58,0,14896,0.0,2025-03-15,2025-06-29
+22,oxygen.csv,1,34796,"timestamp, value",83,0,34796,0.0,2025-03-15,2025-06-30
+22,stress.csv,1,56,"DATE, UPDATED_AT, STRESS_SCORE, CALCULATION_FAILED",56,0,112,0.0,2025-03-15,2025-06-30
+23,daily_questions.csv,1,76,"timeStampScheduled, timeStampSent, timeStampStart, timeStampStop, originalTimeStampSent, timeZoneOffset, deltaUTC, stress, anxiety",76,0,152,0.0,2025-03-09,2025-06-30
+23,sleep.csv,1,43,"timestamp, overall_score, deep_sleep_in_minutes",42,0,86,0.0,2025-05-16,2025-06-30
+23,activity_level.csv,1,44536,"timestamp, level",78,0,44536,0.0,2025-03-18,2025-06-30
+23,steps.csv,1,18029,"timestamp, steps",76,0,18029,0.0,2025-03-18,2025-06-30
+23,hrv.csv,1,3783,"timestamp, rmssd, coverage, low_frequency, high_frequency",43,0,15132,0.0,2025-05-16,2025-06-30
+23,oxygen.csv,1,23986,"timestamp, value",68,0,23986,0.0,2025-03-19,2025-06-30
+23,stress.csv,1,47,"DATE, UPDATED_AT, STRESS_SCORE, CALCULATION_FAILED",47,0,94,0.0,2025-03-19,2025-06-30
+24,daily_questions.csv,1,108,"timeStampScheduled, timeStampSent, timeStampStart, timeStampStop, originalTimeStampSent, timeZoneOffset, deltaUTC, stress, anxiety",108,0,216,0.0,2025-03-19,2025-07-04
+24,sleep.csv,1,103,"timestamp, overall_score, deep_sleep_in_minutes",102,0,206,0.0,2025-03-14,2025-07-01
+24,activity_level.csv,1,95232,"timestamp, level",111,0,95232,0.0,2025-03-13,2025-07-01
+24,steps.csv,1,38829,"timestamp, steps",111,0,38829,0.0,2025-03-13,2025-07-01
+24,hrv.csv,1,8349,"timestamp, rmssd, coverage, low_frequency, high_frequency",108,0,33396,0.0,2025-03-13,2025-06-29
+24,oxygen.csv,1,49083,"timestamp, value",107,0,49083,0.0,2025-03-13,2025-07-01
+24,stress.csv,1,103,"DATE, UPDATED_AT, STRESS_SCORE, CALCULATION_FAILED",103,0,206,0.0,2025-03-14,2025-07-01
+25,daily_questions.csv,1,7,"timeStampScheduled, timeStampSent, timeStampStart, timeStampStop, originalTimeStampSent, timeZoneOffset, deltaUTC, stress, anxiety",7,0,14,0.0,2025-03-13,2025-05-15
+25,sleep.csv,1,38,"timestamp, overall_score, deep_sleep_in_minutes",38,0,76,0.0,2025-03-14,2025-04-28
+25,activity_level.csv,1,27234,"timestamp, level",47,0,27234,0.0,2025-03-13,2025-04-28
+25,steps.csv,1,11689,"timestamp, steps",47,0,11689,0.0,2025-03-13,2025-04-28
+25,hrv.csv,1,3605,"timestamp, rmssd, coverage, low_frequency, high_frequency",42,0,14420,0.0,2025-03-14,2025-04-27
+25,oxygen.csv,1,22137,"timestamp, value",45,0,22137,0.0,2025-03-13,2025-04-28
+25,stress.csv,1,38,"DATE, UPDATED_AT, STRESS_SCORE, CALCULATION_FAILED",38,0,76,0.0,2025-03-14,2025-04-28
+26,daily_questions.csv,1,102,"timeStampScheduled, timeStampSent, timeStampStart, timeStampStop, originalTimeStampSent, timeZoneOffset, deltaUTC, stress, anxiety",102,0,204,0.0,2025-03-06,2025-07-02
+26,sleep.csv,1,88,"timestamp, overall_score, deep_sleep_in_minutes",88,0,176,0.0,2025-03-14,2025-06-13
+26,activity_level.csv,1,59938,"timestamp, level",94,0,59938,0.0,2025-03-13,2025-06-14
+26,steps.csv,1,24453,"timestamp, steps",94,0,24453,0.0,2025-03-13,2025-06-14
+26,hrv.csv,1,8274,"timestamp, rmssd, coverage, low_frequency, high_frequency",91,0,33096,0.0,2025-03-13,2025-06-12
+26,oxygen.csv,1,46713,"timestamp, value",92,0,46713,0.0,2025-03-13,2025-06-13
+26,stress.csv,1,87,"DATE, UPDATED_AT, STRESS_SCORE, CALCULATION_FAILED",87,0,174,0.0,2025-03-14,2025-06-13
+27,daily_questions.csv,1,116,"timeStampScheduled, timeStampSent, timeStampStart, timeStampStop, originalTimeStampSent, timeZoneOffset, deltaUTC, stress, anxiety",113,0,232,0.0,2025-03-07,2025-07-03
+27,sleep.csv,1,97,"timestamp, overall_score, deep_sleep_in_minutes",91,0,194,0.0,2025-03-14,2025-06-30
+27,activity_level.csv,1,84028,"timestamp, level",110,0,84028,0.0,2025-03-13,2025-06-30
+27,steps.csv,1,36823,"timestamp, steps",109,0,36823,0.0,2025-03-14,2025-06-30
+27,hrv.csv,1,7765,"timestamp, rmssd, coverage, low_frequency, high_frequency",98,0,31060,0.0,2025-03-14,2025-06-29
+27,oxygen.csv,1,53160,"timestamp, value",109,0,53160,0.0,2025-03-14,2025-06-30
+27,stress.csv,1,95,"DATE, UPDATED_AT, STRESS_SCORE, CALCULATION_FAILED",95,0,190,0.0,2025-03-14,2025-06-30
+28,daily_questions.csv,1,108,"timeStampScheduled, timeStampSent, timeStampStart, timeStampStop, originalTimeStampSent, timeZoneOffset, deltaUTC, stress, anxiety",108,0,216,0.0,2025-03-10,2025-06-30
+28,sleep.csv,1,67,"timestamp, overall_score, deep_sleep_in_minutes",66,0,134,0.0,2025-03-14,2025-06-16
+28,activity_level.csv,1,62326,"timestamp, level",79,0,62326,0.0,2025-03-13,2025-06-17
+28,steps.csv,1,21088,"timestamp, steps",79,0,21088,0.0,2025-03-13,2025-06-17
+28,hrv.csv,1,5832,"timestamp, rmssd, coverage, low_frequency, high_frequency",67,0,23328,0.0,2025-03-14,2025-06-16
+28,oxygen.csv,1,34522,"timestamp, value",70,0,34522,0.0,2025-03-13,2025-06-16
+28,stress.csv,1,63,"DATE, UPDATED_AT, STRESS_SCORE, CALCULATION_FAILED",63,0,126,0.0,2025-03-14,2025-06-16
+29,daily_questions.csv,1,115,"timeStampScheduled, timeStampSent, timeStampStart, timeStampStop, originalTimeStampSent, timeZoneOffset, deltaUTC, stress, anxiety",115,0,230,0.0,2025-03-13,2025-07-08
+29,sleep.csv,1,43,"timestamp, overall_score, deep_sleep_in_minutes",41,0,86,0.0,2025-03-14,2025-06-28
+29,activity_level.csv,1,36465,"timestamp, level",78,0,36465,0.0,2025-03-13,2025-06-29
+29,steps.csv,1,12773,"timestamp, steps",75,0,12773,0.0,2025-03-13,2025-06-29
+29,hrv.csv,1,3207,"timestamp, rmssd, coverage, low_frequency, high_frequency",43,0,12828,0.0,2025-03-14,2025-06-28
+29,oxygen.csv,1,22687,"timestamp, value",70,0,22687,0.0,2025-03-13,2025-06-29
+29,stress.csv,1,47,"DATE, UPDATED_AT, STRESS_SCORE, CALCULATION_FAILED",47,0,94,0.0,2025-03-14,2025-06-28
+30,daily_questions.csv,1,108,"timeStampScheduled, timeStampSent, timeStampStart, timeStampStop, originalTimeStampSent, timeZoneOffset, deltaUTC, stress, anxiety",108,0,216,0.0,2025-03-16,2025-07-04
+30,sleep.csv,1,77,"timestamp, overall_score, deep_sleep_in_minutes",74,0,154,0.0,2025-03-14,2025-05-27
+30,activity_level.csv,1,62887,"timestamp, level",77,0,62887,0.0,2025-03-13,2025-05-28
+30,steps.csv,1,24350,"timestamp, steps",77,0,24350,0.0,2025-03-13,2025-05-28
+30,hrv.csv,1,5247,"timestamp, rmssd, coverage, low_frequency, high_frequency",74,0,20988,0.0,2025-03-14,2025-05-26
+30,oxygen.csv,1,38782,"timestamp, value",76,0,38782,0.0,2025-03-14,2025-05-28
+30,stress.csv,1,72,"DATE, UPDATED_AT, STRESS_SCORE, CALCULATION_FAILED",71,0,144,0.0,2025-03-14,2025-05-24
+31,daily_questions.csv,1,50,"timeStampScheduled, timeStampSent, timeStampStart, timeStampStop, originalTimeStampSent, timeZoneOffset, deltaUTC, stress, anxiety",50,0,100,0.0,2025-03-13,2025-05-14
+31,sleep.csv,1,27,"timestamp, overall_score, deep_sleep_in_minutes",27,0,54,0.0,2025-03-14,2025-06-28
+31,activity_level.csv,1,41382,"timestamp, level",103,0,41382,0.0,2025-03-13,2025-07-01
+31,steps.csv,1,21606,"timestamp, steps",102,0,21606,0.0,2025-03-13,2025-07-01
+31,hrv.csv,1,2144,"timestamp, rmssd, coverage, low_frequency, high_frequency",30,0,8576,0.0,2025-03-13,2025-06-28
+31,oxygen.csv,1,16479,"timestamp, value",64,0,16479,0.0,2025-03-13,2025-06-30
+31,stress.csv,1,42,"DATE, UPDATED_AT, STRESS_SCORE, CALCULATION_FAILED",42,0,84,0.0,2025-03-14,2025-06-30
+32,daily_questions.csv,1,116,"timeStampScheduled, timeStampSent, timeStampStart, timeStampStop, originalTimeStampSent, timeZoneOffset, deltaUTC, stress, anxiety",116,0,232,0.0,2025-03-06,2025-07-03
+32,sleep.csv,1,80,"timestamp, overall_score, deep_sleep_in_minutes",80,0,160,0.0,2025-03-15,2025-06-17
+32,activity_level.csv,1,77079,"timestamp, level",96,0,77079,0.0,2025-03-13,2025-06-17
+32,steps.csv,1,28669,"timestamp, steps",96,0,28669,0.0,2025-03-13,2025-06-17
+32,hrv.csv,1,7238,"timestamp, rmssd, coverage, low_frequency, high_frequency",89,0,28952,0.0,2025-03-15,2025-06-16
+32,oxygen.csv,1,40383,"timestamp, value",93,0,40383,0.0,2025-03-13,2025-06-17
+32,stress.csv,1,85,"DATE, UPDATED_AT, STRESS_SCORE, CALCULATION_FAILED",85,0,170,0.0,2025-03-15,2025-06-17
+33,daily_questions.csv,1,115,"timeStampScheduled, timeStampSent, timeStampStart, timeStampStop, originalTimeStampSent, timeZoneOffset, deltaUTC, stress, anxiety",115,0,230,0.0,2025-03-04,2025-07-01
+33,sleep.csv,1,78,"timestamp, overall_score, deep_sleep_in_minutes",76,0,156,0.0,2025-04-08,2025-06-22
+33,activity_level.csv,1,42655,"timestamp, level",78,0,42655,0.0,2025-04-07,2025-06-23
+33,steps.csv,1,11600,"timestamp, steps",78,0,11600,0.0,2025-04-07,2025-06-23
+33,hrv.csv,1,6552,"timestamp, rmssd, coverage, low_frequency, high_frequency",76,0,26208,0.0,2025-04-07,2025-06-21
+33,oxygen.csv,1,43648,"timestamp, value",76,0,43648,0.0,2025-04-08,2025-06-22
+33,stress.csv,1,71,"DATE, UPDATED_AT, STRESS_SCORE, CALCULATION_FAILED",71,0,142,0.0,2025-04-08,2025-06-22
+34,daily_questions.csv,1,111,"timeStampScheduled, timeStampSent, timeStampStart, timeStampStop, originalTimeStampSent, timeZoneOffset, deltaUTC, stress, anxiety",110,0,222,0.0,2025-03-06,2025-07-04
+34,sleep.csv,1,75,"timestamp, overall_score, deep_sleep_in_minutes",74,0,150,0.0,2025-03-14,2025-06-27
+34,activity_level.csv,1,82552,"timestamp, level",97,0,82552,0.0,2025-03-13,2025-06-27
+34,steps.csv,1,40245,"timestamp, steps",97,0,40245,0.0,2025-03-13,2025-06-27
+34,hrv.csv,1,5713,"timestamp, rmssd, coverage, low_frequency, high_frequency",83,0,22852,0.0,2025-03-14,2025-06-27
+34,oxygen.csv,1,35914,"timestamp, value",92,0,35914,0.0,2025-03-14,2025-06-27
+34,stress.csv,1,74,"DATE, UPDATED_AT, STRESS_SCORE, CALCULATION_FAILED",74,0,148,0.0,2025-03-14,2025-06-27
+35,daily_questions.csv,1,81,"timeStampScheduled, timeStampSent, timeStampStart, timeStampStop, originalTimeStampSent, timeZoneOffset, deltaUTC, stress, anxiety",81,0,162,0.0,2025-04-06,2025-06-30
+35,sleep.csv,1,35,"timestamp, overall_score, deep_sleep_in_minutes",34,0,70,0.0,2025-04-08,2025-05-13
+35,activity_level.csv,1,28944,"timestamp, level",38,0,28944,0.0,2025-04-07,2025-05-14
+35,steps.csv,1,14009,"timestamp, steps",38,0,14009,0.0,2025-04-07,2025-05-14
+35,hrv.csv,1,3475,"timestamp, rmssd, coverage, low_frequency, high_frequency",34,0,13900,0.0,2025-04-08,2025-05-13
+35,oxygen.csv,1,19908,"timestamp, value",35,0,19908,0.0,2025-04-09,2025-05-13
+35,stress.csv,1,36,"DATE, UPDATED_AT, STRESS_SCORE, CALCULATION_FAILED",36,0,72,0.0,2025-04-08,2025-05-13
