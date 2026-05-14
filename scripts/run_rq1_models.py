@@ -115,7 +115,7 @@ def build_models() -> dict[str, object]:
                     MLPClassifier(
                         hidden_layer_sizes=(64,),
                         alpha=0.001,
-                        max_iter=1000,
+                        max_iter=3000,
                         random_state=RANDOM_SEED,
                     ),
                 ),
