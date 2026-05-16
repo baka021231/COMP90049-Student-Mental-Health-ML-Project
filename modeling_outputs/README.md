@@ -18,6 +18,7 @@
 | `03_model_data/` | 加入日历特征、按学生划分 train/test 后的建模数据 | `scripts/prepare_strict_model_data.py` |
 | `04_rq1/` | RQ1 模型比较结果、调参结果、混淆矩阵和中文总结 | `scripts/run_strict_rq1_models.py` |
 | `05_rq2/` | RQ2 特征组对比结果、调参结果和中文总结 | `scripts/run_strict_rq2_feature_groups.py` |
+| `06_rq3/` | RQ3 严格版时序特征实验、调参结果、混淆矩阵、趋势图和中文总结 | `scripts/rq3/run_strict_temporal_features.py` |
 | `99_validation/` | 严格流程的验证记录 | 手动记录 |
 
 ## legacy_pipeline
