@@ -1,0 +1,13 @@
+feature,missing_rows,missing_percent
+sleep_score,1617,51.86
+deep_sleep_minutes,1617,51.86
+avg_low_frequency,1481,47.5
+avg_rmssd,1481,47.5
+avg_high_frequency,1481,47.5
+std_oxygen,1111,35.63
+avg_oxygen,1109,35.57
+total_steps,886,28.42
+sedentary_minutes,861,27.61
+very_active_minutes,861,27.61
+lightly_active_minutes,861,27.61
+moderately_active_minutes,861,27.61

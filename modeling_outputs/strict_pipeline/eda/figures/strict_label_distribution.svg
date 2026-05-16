@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" viewBox="0 0 900 520">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="450.0" y="32.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#111827">Strict Dataset Stress Label Distribution</text>
+<line x1="88" y1="416" x2="864" y2="416" stroke="#9ca3af"/>
+<line x1="88" y1="58" x2="88" y2="416" stroke="#9ca3af"/>
+<text x="24.0" y="237.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="400" fill="#111827">Student-day count</text>
+<line x1="88" y1="416.0" x2="864" y2="416.0" stroke="#e5e7eb"/>
+<text x="76.0" y="420.0" text-anchor="end" font-family="Arial, sans-serif" font-size="11" font-weight="400" fill="#4b5563">0.00</text>
+<line x1="88" y1="344.4" x2="864" y2="344.4" stroke="#e5e7eb"/>
+<text x="76.0" y="348.4" text-anchor="end" font-family="Arial, sans-serif" font-size="11" font-weight="400" fill="#4b5563">255.35</text>
+<line x1="88" y1="272.8" x2="864" y2="272.8" stroke="#e5e7eb"/>
+<text x="76.0" y="276.8" text-anchor="end" font-family="Arial, sans-serif" font-size="11" font-weight="400" fill="#4b5563">510.70</text>
+<line x1="88" y1="201.2" x2="864" y2="201.2" stroke="#e5e7eb"/>
+<text x="76.0" y="205.2" text-anchor="end" font-family="Arial, sans-serif" font-size="11" font-weight="400" fill="#4b5563">766.06</text>
+<line x1="88" y1="129.6" x2="864" y2="129.6" stroke="#e5e7eb"/>
+<text x="76.0" y="133.6" text-anchor="end" font-family="Arial, sans-serif" font-size="11" font-weight="400" fill="#4b5563">1021.41</text>
+<line x1="88" y1="58.0" x2="864" y2="58.0" stroke="#e5e7eb"/>
+<text x="76.0" y="62.0" text-anchor="end" font-family="Arial, sans-serif" font-size="11" font-weight="400" fill="#4b5563">1276.76</text>
+<rect x="88.0" y="112.6" width="244.0" height="303.4" fill="#2563eb"/>
+<text x="210.0" y="440.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="400" fill="#374151">Low</text>
+<text x="210.0" y="104.6" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="700" fill="#111827">1082</text>
+<rect x="354.0" y="140.1" width="244.0" height="275.9" fill="#2563eb"/>
+<text x="476.0" y="440.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="400" fill="#374151">Medium</text>
+<text x="476.0" y="132.1" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="700" fill="#111827">984</text>
+<rect x="620.0" y="121.0" width="244.0" height="295.0" fill="#2563eb"/>
+<text x="742.0" y="440.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="400" fill="#374151">High</text>
+<text x="742.0" y="113.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="700" fill="#111827">1052</text>
+</svg>

@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="520" viewBox="0 0 880 520">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="440.0" y="32.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#111827">RQ3 Best Test Macro-F1 by Temporal Condition</text>
+<line x1="86" y1="424" x2="846" y2="424" stroke="#9ca3af"/>
+<line x1="86" y1="58" x2="86" y2="424" stroke="#9ca3af"/>
+<text x="24.0" y="241.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="400" fill="#111827">Macro-F1</text>
+<line x1="86" y1="424.0" x2="846" y2="424.0" stroke="#e5e7eb"/>
+<text x="74.0" y="428.0" text-anchor="end" font-family="Arial, sans-serif" font-size="11" font-weight="400" fill="#4b5563">0.00</text>
+<line x1="86" y1="350.8" x2="846" y2="350.8" stroke="#e5e7eb"/>
+<text x="74.0" y="354.8" text-anchor="end" font-family="Arial, sans-serif" font-size="11" font-weight="400" fill="#4b5563">0.09</text>
+<line x1="86" y1="277.6" x2="846" y2="277.6" stroke="#e5e7eb"/>
+<text x="74.0" y="281.6" text-anchor="end" font-family="Arial, sans-serif" font-size="11" font-weight="400" fill="#4b5563">0.18</text>
+<line x1="86" y1="204.4" x2="846" y2="204.4" stroke="#e5e7eb"/>
+<text x="74.0" y="208.4" text-anchor="end" font-family="Arial, sans-serif" font-size="11" font-weight="400" fill="#4b5563">0.27</text>
+<line x1="86" y1="131.2" x2="846" y2="131.2" stroke="#e5e7eb"/>
+<text x="74.0" y="135.2" text-anchor="end" font-family="Arial, sans-serif" font-size="11" font-weight="400" fill="#4b5563">0.36</text>
+<line x1="86" y1="58.0" x2="846" y2="58.0" stroke="#e5e7eb"/>
+<text x="74.0" y="62.0" text-anchor="end" font-family="Arial, sans-serif" font-size="11" font-weight="400" fill="#4b5563">0.45</text>
+<rect x="86.0" y="104.8" width="134.4" height="319.2" fill="#7c3aed"/>
+<text x="153.2" y="448.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="400" fill="#374151">rolling7 wearable</text>
+<text x="153.2" y="96.8" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="700" fill="#111827">0.392</text>
+<rect x="242.4" y="106.4" width="134.4" height="317.6" fill="#7c3aed"/>
+<text x="309.6" y="448.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="400" fill="#374151">rolling3 wearable</text>
+<text x="309.6" y="98.4" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="700" fill="#111827">0.390</text>
+<rect x="398.8" y="107.2" width="134.4" height="316.8" fill="#7c3aed"/>
+<text x="466.0" y="448.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="400" fill="#374151">lag1 wearable</text>
+<text x="466.0" y="99.2" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="700" fill="#111827">0.389</text>
+<rect x="555.2" y="124.2" width="134.4" height="299.8" fill="#7c3aed"/>
+<text x="622.4" y="448.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="400" fill="#374151">semester week only</text>
+<text x="622.4" y="116.2" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="700" fill="#111827">0.369</text>
+<rect x="711.6" y="133.5" width="134.4" height="290.5" fill="#7c3aed"/>
+<text x="778.8" y="448.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="400" fill="#374151">no temporal</text>
+<text x="778.8" y="125.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="700" fill="#111827">0.357</text>
+</svg>

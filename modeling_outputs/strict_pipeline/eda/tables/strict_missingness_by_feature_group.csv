@@ -1,0 +1,5 @@
+feature_group,n_features,missing_cells,total_cells,missing_percent,complete_rows,complete_percent
+Sleep,2,3234,6236,51.86,1501,48.14
+Activity,5,4330,15590,27.77,2232,71.58
+HRV,3,4443,9354,47.5,1637,52.5
+SpO2,2,2220,6236,35.6,2007,64.37

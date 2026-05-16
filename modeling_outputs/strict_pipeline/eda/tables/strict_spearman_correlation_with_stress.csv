@@ -1,0 +1,13 @@
+feature,spearman_rho_with_stress
+total_steps,0.09961211581241163
+lightly_active_minutes,0.08209151267618126
+moderately_active_minutes,0.07805468547857135
+avg_oxygen,0.06087283914617373
+sedentary_minutes,0.059569907023841615
+very_active_minutes,0.049554264888352864
+std_oxygen,0.0446862472425932
+avg_high_frequency,0.026230498520004773
+avg_rmssd,0.018805193441113144
+sleep_score,0.002780215490784806
+deep_sleep_minutes,-0.01806117308258526
+avg_low_frequency,-0.14831101776170363

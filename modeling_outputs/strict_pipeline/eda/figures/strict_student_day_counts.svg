@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="560" viewBox="0 0 980 560">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="490.0" y="32.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#111827">Strict Dataset Student-Day Counts</text>
+<line x1="70" y1="464" x2="945" y2="464" stroke="#9ca3af"/>
+<line x1="70" y1="58" x2="70" y2="464" stroke="#9ca3af"/>
+<text x="24.0" y="261.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="400" fill="#111827">Student-days</text>
+<text x="490.0" y="536.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="400" fill="#111827">Student ID</text>
+<line x1="70" y1="464.0" x2="945" y2="464.0" stroke="#e5e7eb"/>
+<text x="58.0" y="468.0" text-anchor="end" font-family="Arial, sans-serif" font-size="11" font-weight="400" fill="#4b5563">0</text>
+<line x1="70" y1="402.9" x2="945" y2="402.9" stroke="#e5e7eb"/>
+<text x="58.0" y="406.9" text-anchor="end" font-family="Arial, sans-serif" font-size="11" font-weight="400" fill="#4b5563">20</text>
+<line x1="70" y1="341.9" x2="945" y2="341.9" stroke="#e5e7eb"/>
+<text x="58.0" y="345.9" text-anchor="end" font-family="Arial, sans-serif" font-size="11" font-weight="400" fill="#4b5563">40</text>
+<line x1="70" y1="280.8" x2="945" y2="280.8" stroke="#e5e7eb"/>
+<text x="58.0" y="284.8" text-anchor="end" font-family="Arial, sans-serif" font-size="11" font-weight="400" fill="#4b5563">60</text>
+<line x1="70" y1="219.8" x2="945" y2="219.8" stroke="#e5e7eb"/>
+<text x="58.0" y="223.8" text-anchor="end" font-family="Arial, sans-serif" font-size="11" font-weight="400" fill="#4b5563">80</text>
+<line x1="70" y1="158.7" x2="945" y2="158.7" stroke="#e5e7eb"/>
+<text x="58.0" y="162.7" text-anchor="end" font-family="Arial, sans-serif" font-size="11" font-weight="400" fill="#4b5563">100</text>
+<line x1="70" y1="97.7" x2="945" y2="97.7" stroke="#e5e7eb"/>
+<text x="58.0" y="101.7" text-anchor="end" font-family="Arial, sans-serif" font-size="11" font-weight="400" fill="#4b5563">120</text>
+<rect x="70.0" y="442.6" width="23.0" height="21.4" fill="#d97706"/>
+<text x="82.5" y="482.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="400" fill="#111827">25</text>
+<rect x="95.0" y="421.3" width="23.0" height="42.7" fill="#d97706"/>
+<rect x="120.0" y="344.9" width="23.0" height="119.1" fill="#2563eb"/>
+<text x="132.5" y="482.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="400" fill="#111827">11</text>
+<rect x="145.0" y="344.9" width="23.0" height="119.1" fill="#2563eb"/>
+<rect x="170.0" y="311.4" width="23.0" height="152.6" fill="#2563eb"/>
+<text x="182.5" y="482.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="400" fill="#111827">31</text>
+<rect x="195.0" y="296.1" width="23.0" height="167.9" fill="#2563eb"/>
+<rect x="220.0" y="286.9" width="23.0" height="177.1" fill="#2563eb"/>
+<text x="232.5" y="482.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="400" fill="#111827">15</text>
+<rect x="245.0" y="283.9" width="23.0" height="180.1" fill="#2563eb"/>
+<rect x="270.0" y="280.8" width="23.0" height="183.2" fill="#2563eb"/>
+<text x="282.5" y="482.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="400" fill="#111827">9</text>
+<rect x="295.0" y="247.3" width="23.0" height="216.7" fill="#2563eb"/>
+<rect x="320.0" y="232.0" width="23.0" height="232.0" fill="#2563eb"/>
+<text x="332.5" y="482.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="400" fill="#111827">23</text>
+<rect x="345.0" y="216.7" width="23.0" height="247.3" fill="#2563eb"/>
+<rect x="370.0" y="213.7" width="23.0" height="250.3" fill="#2563eb"/>
+<text x="382.5" y="482.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="400" fill="#111827">18</text>
+<rect x="395.0" y="201.5" width="23.0" height="262.5" fill="#2563eb"/>
+<rect x="420.0" y="158.7" width="23.0" height="305.3" fill="#2563eb"/>
+<text x="432.5" y="482.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="400" fill="#111827">20</text>
+<rect x="445.0" y="152.6" width="23.0" height="311.4" fill="#2563eb"/>
+<rect x="470.0" y="152.6" width="23.0" height="311.4" fill="#2563eb"/>
+<text x="482.5" y="482.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="400" fill="#111827">7</text>
+<rect x="495.0" y="152.6" width="23.0" height="311.4" fill="#2563eb"/>
+<rect x="520.0" y="146.5" width="23.0" height="317.5" fill="#2563eb"/>
+<text x="532.5" y="482.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="400" fill="#111827">6</text>
+<rect x="545.0" y="146.5" width="23.0" height="317.5" fill="#2563eb"/>
+<rect x="570.0" y="134.3" width="23.0" height="329.7" fill="#2563eb"/>
+<text x="582.5" y="482.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="400" fill="#111827">30</text>
+<rect x="595.0" y="134.3" width="23.0" height="329.7" fill="#2563eb"/>
+<rect x="620.0" y="134.3" width="23.0" height="329.7" fill="#2563eb"/>
+<text x="632.5" y="482.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="400" fill="#111827">24</text>
+<rect x="645.0" y="128.2" width="23.0" height="335.8" fill="#2563eb"/>
+<rect x="670.0" y="119.1" width="23.0" height="344.9" fill="#2563eb"/>
+<text x="682.5" y="482.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="400" fill="#111827">27</text>
+<rect x="695.0" y="116.0" width="23.0" height="348.0" fill="#2563eb"/>
+<rect x="720.0" y="112.9" width="23.0" height="351.1" fill="#2563eb"/>
+<text x="732.5" y="482.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="400" fill="#111827">33</text>
+<rect x="745.0" y="112.9" width="23.0" height="351.1" fill="#2563eb"/>
+<rect x="770.0" y="112.9" width="23.0" height="351.1" fill="#2563eb"/>
+<text x="782.5" y="482.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="400" fill="#111827">29</text>
+<rect x="795.0" y="109.9" width="23.0" height="354.1" fill="#2563eb"/>
+<rect x="820.0" y="109.9" width="23.0" height="354.1" fill="#2563eb"/>
+<text x="832.5" y="482.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="400" fill="#111827">32</text>
+<rect x="845.0" y="106.8" width="23.0" height="357.2" fill="#2563eb"/>
+<rect x="870.0" y="103.8" width="23.0" height="360.2" fill="#2563eb"/>
+<text x="882.5" y="482.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="400" fill="#111827">4</text>
+<rect x="895.0" y="94.6" width="23.0" height="369.4" fill="#2563eb"/>
+<rect x="920.0" y="58.0" width="23.0" height="406.0" fill="#2563eb"/>
+<text x="932.5" y="482.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="400" fill="#111827">5</text>
+<text x="805.0" y="72.0" text-anchor="start" font-family="Arial, sans-serif" font-size="12" font-weight="400" fill="#111827">Orange: fewer than 30 days</text>
+</svg>

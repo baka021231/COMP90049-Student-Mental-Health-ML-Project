@@ -1,0 +1,8 @@
+file,students,total_target_days,covered_target_days,mean_student_coverage_percent,overall_target_day_coverage_percent
+activity_level.csv,35,3118,2257,69.2,72.39
+daily_questions.csv,35,3118,3118,100.0,100.0
+hrv.csv,35,3118,1637,48.99,52.5
+oxygen.csv,35,3118,2009,61.16,64.43
+sleep.csv,35,3118,1508,44.79,48.36
+steps.csv,35,3118,2232,68.49,71.58
+stress.csv,35,3118,1466,43.68,47.02
