@@ -1,0 +1,7 @@
+RQ3 temporal analysis summary
+
+Figure 4 trend:
+Mean self-reported stress was lowest in week 3 (M=27.31, SD=20.30) and highest in week 19 (M=51.63, SD=31.27). The trajectory starts at a moderate level, dips in the early semester, rises around weeks 5-8, drops again around weeks 9-12, and then climbs toward the end of the semester, with the strongest stress levels in weeks 17-19.
+
+Table 5 best configuration:
+One-day lag features achieved the highest macro-F1 of 0.656, an improvement of +0.027 over the non-temporal baseline.
