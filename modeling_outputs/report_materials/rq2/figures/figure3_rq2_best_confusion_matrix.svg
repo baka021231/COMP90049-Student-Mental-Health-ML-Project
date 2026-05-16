@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="590" viewBox="0 0 700 590">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="350.0" y="34.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#111827">RQ2 Best Model Confusion Matrix (HRV+SpO2 RF)</text>
+<text x="350.0" y="60.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="400" fill="#4b5563">Each cell shows count and row percentage</text>
+<text x="353.0" y="564.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="400" fill="#111827">Predicted label</text>
+<text x="32.0" y="279.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="400" fill="#111827">Actual label</text>
+<text x="231.0" y="78.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="700" fill="#111827">Low</text>
+<text x="353.0" y="78.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="700" fill="#111827">Medium</text>
+<text x="475.0" y="78.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="700" fill="#111827">High</text>
+<text x="152.0" y="155.0" text-anchor="end" font-family="Arial, sans-serif" font-size="12" font-weight="700" fill="#111827">Low</text>
+<text x="152.0" y="173.0" text-anchor="end" font-family="Arial, sans-serif" font-size="10" font-weight="400" fill="#6b7280">n=386</text>
+<rect x="170" y="96" width="122" height="122" fill="rgb(116,123,255)" stroke="#ffffff" stroke-width="2"/>
+<text x="231.0" y="152.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#111827">225</text>
+<text x="231.0" y="175.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="400" fill="#374151">58.3%</text>
+<rect x="292" y="96" width="122" height="122" fill="rgb(213,220,255)" stroke="#ffffff" stroke-width="2"/>
+<text x="353.0" y="152.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#111827">57</text>
+<text x="353.0" y="175.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="400" fill="#374151">14.8%</text>
+<rect x="414" y="96" width="122" height="122" fill="rgb(185,192,255)" stroke="#ffffff" stroke-width="2"/>
+<text x="475.0" y="152.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#111827">104</text>
+<text x="475.0" y="175.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="400" fill="#374151">26.9%</text>
+<text x="152.0" y="277.0" text-anchor="end" font-family="Arial, sans-serif" font-size="12" font-weight="700" fill="#111827">Medium</text>
+<text x="152.0" y="295.0" text-anchor="end" font-family="Arial, sans-serif" font-size="10" font-weight="400" fill="#6b7280">n=267</text>
+<rect x="170" y="218" width="122" height="122" fill="rgb(191,198,255)" stroke="#ffffff" stroke-width="2"/>
+<text x="231.0" y="274.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#111827">94</text>
+<text x="231.0" y="297.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="400" fill="#374151">35.2%</text>
+<rect x="292" y="218" width="122" height="122" fill="rgb(209,216,255)" stroke="#ffffff" stroke-width="2"/>
+<text x="353.0" y="274.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#111827">63</text>
+<text x="353.0" y="297.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="400" fill="#374151">23.6%</text>
+<rect x="414" y="218" width="122" height="122" fill="rgb(182,189,255)" stroke="#ffffff" stroke-width="2"/>
+<text x="475.0" y="274.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#111827">110</text>
+<text x="475.0" y="297.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="400" fill="#374151">41.2%</text>
+<text x="152.0" y="399.0" text-anchor="end" font-family="Arial, sans-serif" font-size="12" font-weight="700" fill="#111827">High</text>
+<text x="152.0" y="417.0" text-anchor="end" font-family="Arial, sans-serif" font-size="10" font-weight="400" fill="#6b7280">n=248</text>
+<rect x="170" y="340" width="122" height="122" fill="rgb(192,199,255)" stroke="#ffffff" stroke-width="2"/>
+<text x="231.0" y="396.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#111827">93</text>
+<text x="231.0" y="419.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="400" fill="#374151">37.5%</text>
+<rect x="292" y="340" width="122" height="122" fill="rgb(210,217,255)" stroke="#ffffff" stroke-width="2"/>
+<text x="353.0" y="396.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#111827">62</text>
+<text x="353.0" y="419.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="400" fill="#374151">25.0%</text>
+<rect x="414" y="340" width="122" height="122" fill="rgb(192,199,255)" stroke="#ffffff" stroke-width="2"/>
+<text x="475.0" y="396.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#111827">93</text>
+<text x="475.0" y="419.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="400" fill="#374151">37.5%</text>
+</svg>

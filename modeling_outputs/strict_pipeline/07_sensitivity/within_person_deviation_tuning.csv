@@ -1,0 +1,15 @@
+condition,n_features,model,cv_macro_f1,best_params,n_candidates
+no_temporal,12,majority_baseline,,{},1
+no_temporal,12,logistic_regression,0.2886043335761568,"{""classifier__C"": 0.1}",3
+no_temporal,12,svm,0.3529110758143338,"{""classifier__C"": 10.0, ""classifier__kernel"": ""rbf""}",6
+no_temporal,12,knn,0.2961999288685041,"{""classifier__n_neighbors"": 3}",3
+no_temporal,12,random_forest,0.367954182500818,"{""classifier__max_depth"": 10, ""classifier__n_estimators"": 100}",6
+no_temporal,12,gradient_boosting,0.35326355359348904,"{""classifier__learning_rate"": 0.1, ""classifier__max_depth"": 3, ""classifier__n_estimators"": 200}",8
+no_temporal,12,mlp,0.3621691858903974,"{""classifier__alpha"": 0.001, ""classifier__hidden_layer_sizes"": [64]}",6
+deviation_only,24,majority_baseline,,{},1
+deviation_only,24,logistic_regression,0.3152038423339102,"{""classifier__C"": 0.1}",3
+deviation_only,24,svm,0.3708235337127036,"{""classifier__C"": 1.0, ""classifier__kernel"": ""rbf""}",6
+deviation_only,24,knn,0.3077815920118997,"{""classifier__n_neighbors"": 3}",3
+deviation_only,24,random_forest,0.3839830590663603,"{""classifier__max_depth"": 10, ""classifier__n_estimators"": 300}",6
+deviation_only,24,gradient_boosting,0.39054143695881205,"{""classifier__learning_rate"": 0.1, ""classifier__max_depth"": 3, ""classifier__n_estimators"": 200}",8
+deviation_only,24,mlp,0.36474001939965034,"{""classifier__alpha"": 0.0001, ""classifier__hidden_layer_sizes"": [64]}",6

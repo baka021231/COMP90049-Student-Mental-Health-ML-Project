@@ -1,0 +1,8 @@
+model,algorithm_family,pipeline_preprocessing,tuning_method,candidate_range,n_candidates,rq1_selected_value,rq1_cv_macro_f1
+Majority baseline,Dummy classifier,SimpleImputer(median),No tuning,N/A,1,N/A,N/A
+Logistic Regression,Linear model,SimpleImputer(median) + StandardScaler,"GroupKFold + GridSearchCV, scoring=f1_macro","C = {0.1, 1.0, 10.0}",3,C = 0.1,0.289
+SVM,Kernel / margin-based classifier,SimpleImputer(median) + StandardScaler,"GroupKFold + GridSearchCV, scoring=f1_macro","C = {0.1, 1.0, 10.0}; kernel = {linear, rbf}",6,C = 10.0; kernel = rbf,0.353
+kNN,Instance-based classifier,SimpleImputer(median) + StandardScaler,"GroupKFold + GridSearchCV, scoring=f1_macro","n_neighbors = {3, 5, 9}",3,n_neighbors = 3,0.296
+Random Forest,Bagging tree ensemble,SimpleImputer(median),"GroupKFold + GridSearchCV, scoring=f1_macro","n_estimators = {100, 300}; max_depth = {5, 10, None}",6,n_estimators = 100; max_depth = 10,0.368
+Gradient Boosting,Boosting tree ensemble,SimpleImputer(median),"GroupKFold + GridSearchCV, scoring=f1_macro","n_estimators = {100, 200}; learning_rate = {0.05, 0.1}; max_depth = {2, 3}",8,n_estimators = 200; learning_rate = 0.1; max_depth = 3,0.353
+MLP,Neural network,SimpleImputer(median) + StandardScaler,"GroupKFold + GridSearchCV, scoring=f1_macro","hidden_layer_sizes = {(32,), (64,), (32,16)}; alpha = {0.0001, 0.001}",6,"hidden_layer_sizes = (64,); alpha = 0.001",0.362

@@ -1,0 +1,4 @@
+analysis,description,n_train_students,mean_macro_f1,sd_macro_f1,min_macro_f1,max_macro_f1
+rq1_all_wearable_mlp,RQ1 best fixed estimator on train GroupKFold,26,0.28241044122669323,0.103818598305272,0.0,0.4432323766273812
+rq2_hrv_spo2_random_forest,RQ2 best fixed estimator on train GroupKFold,26,0.2747772378929902,0.10534059990229577,0.0,0.42332182585347145
+rq3_rolling7_gradient_boosting,RQ3 best fixed estimator on train GroupKFold,26,0.26056291052427405,0.11148378668498789,0.0,0.41697998787143725

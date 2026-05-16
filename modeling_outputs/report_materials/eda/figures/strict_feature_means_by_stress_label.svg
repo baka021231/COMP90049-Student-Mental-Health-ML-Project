@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="560" viewBox="0 0 980 560">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="490.0" y="32.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#111827">Strict Dataset Standardised Feature Means by Stress Label</text>
+<line x1="527.5" y1="48" x2="527.5" y2="524" stroke="#9ca3af"/>
+<text x="233.0" y="94.6" text-anchor="end" font-family="Arial, sans-serif" font-size="12" font-weight="400" fill="#111827">sleep_score</text>
+<circle cx="523.2" cy="90.6" r="6" fill="#2563eb"/>
+<circle cx="528.0" cy="90.6" r="6" fill="#d97706"/>
+<circle cx="529.8" cy="90.6" r="6" fill="#059669"/>
+<text x="233.0" y="159.7" text-anchor="end" font-family="Arial, sans-serif" font-size="12" font-weight="400" fill="#111827">deep_sleep_minutes</text>
+<circle cx="531.2" cy="155.7" r="6" fill="#2563eb"/>
+<circle cx="527.3" cy="155.7" r="6" fill="#d97706"/>
+<circle cx="525.3" cy="155.7" r="6" fill="#059669"/>
+<text x="233.0" y="224.9" text-anchor="end" font-family="Arial, sans-serif" font-size="12" font-weight="400" fill="#111827">total_steps</text>
+<circle cx="509.2" cy="220.9" r="6" fill="#2563eb"/>
+<circle cx="530.0" cy="220.9" r="6" fill="#d97706"/>
+<circle cx="538.9" cy="220.9" r="6" fill="#059669"/>
+<text x="233.0" y="290.0" text-anchor="end" font-family="Arial, sans-serif" font-size="12" font-weight="400" fill="#111827">sedentary_minutes</text>
+<circle cx="513.6" cy="286.0" r="6" fill="#2563eb"/>
+<circle cx="534.4" cy="286.0" r="6" fill="#d97706"/>
+<circle cx="531.8" cy="286.0" r="6" fill="#059669"/>
+<text x="233.0" y="355.1" text-anchor="end" font-family="Arial, sans-serif" font-size="12" font-weight="400" fill="#111827">avg_rmssd</text>
+<circle cx="527.0" cy="351.1" r="6" fill="#2563eb"/>
+<circle cx="527.5" cy="351.1" r="6" fill="#d97706"/>
+<circle cx="527.9" cy="351.1" r="6" fill="#059669"/>
+<text x="233.0" y="420.3" text-anchor="end" font-family="Arial, sans-serif" font-size="12" font-weight="400" fill="#111827">avg_oxygen</text>
+<circle cx="514.0" cy="416.3" r="6" fill="#2563eb"/>
+<circle cx="532.1" cy="416.3" r="6" fill="#d97706"/>
+<circle cx="533.2" cy="416.3" r="6" fill="#059669"/>
+<text x="233.0" y="485.4" text-anchor="end" font-family="Arial, sans-serif" font-size="12" font-weight="400" fill="#111827">std_oxygen</text>
+<circle cx="521.8" cy="481.4" r="6" fill="#2563eb"/>
+<circle cx="526.0" cy="481.4" r="6" fill="#d97706"/>
+<circle cx="533.0" cy="481.4" r="6" fill="#059669"/>
+<circle cx="845" cy="82" r="6" fill="#2563eb"/>
+<text x="859.0" y="86.0" text-anchor="start" font-family="Arial, sans-serif" font-size="12" font-weight="400" fill="#111827">Low</text>
+<circle cx="845" cy="106" r="6" fill="#d97706"/>
+<text x="859.0" y="110.0" text-anchor="start" font-family="Arial, sans-serif" font-size="12" font-weight="400" fill="#111827">Medium</text>
+<circle cx="845" cy="130" r="6" fill="#059669"/>
+<text x="859.0" y="134.0" text-anchor="start" font-family="Arial, sans-serif" font-size="12" font-weight="400" fill="#111827">High</text>
+</svg>

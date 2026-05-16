@@ -1,0 +1,4 @@
+analysis,description,point_macro_f1,bootstrap_mean_macro_f1,ci_lower_2_5,ci_upper_97_5,n_test_students,n_bootstrap_draws
+rq1_all_wearable_mlp,RQ1 best: all wearable + MLP,0.35721338294688154,0.3445875399372112,0.27401476151065385,0.41498187449331614,9,2000
+rq2_hrv_spo2_random_forest,RQ2 best: HRV + SpO2 + Random Forest,0.39322283919634754,0.380911609471733,0.3013712061410883,0.4540491316837904,9,2000
+rq3_rolling7_gradient_boosting,RQ3 best: rolling7 wearable + Gradient Boosting,0.3924906892407943,0.37751274482714325,0.28899154025588863,0.46850476499979404,9,2000
